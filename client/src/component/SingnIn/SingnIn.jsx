@@ -3,6 +3,8 @@
     import TopHeader from "../Top Header/TopHeader.jsx";
     import Header from "../Header/Header.jsx";
     import Footer from "../Footer/Footer.jsx";
+    import Box from '@mui/material/Box';
+    import TextField from '@mui/material/TextField';
     
     const SingnIn=(props) =>{
       return (
@@ -28,15 +30,29 @@
                     <div className="divS25">Log in to Exclusive</div>
                     <div className="divS26">Enter your details below</div>
                     <div className="divS29">
-                      <div>Email or Phone Number</div>
-                      <input onChange={(e)=>{}}/>
+                         <Box
+                            component="form"
+                            sx={{
+                            '& > :not(style)': { m: 1, width: '25ch' },
+                             }}
+                           noValidate
+                        autoComplete="off"
+                                        >
+                         <TextField id="standard-basic" label="Email or Phone Number" variant="standard" />
+                        </Box>
                     </div>
-                    <div className="divS30" />
                     <div className="divS31">
-                      <div>Password</div>
-                      <input onChange={(e)=>{}}/>
+                    <Box
+                            component="form"
+                            sx={{
+                            '& > :not(style)': { m: 1, width: '25ch' },
+                             }}
+                           noValidate
+                        autoComplete="off"
+                                        >
+                         <TextField id="standard-basic" label="Password" variant="standard" />
+                        </Box>
                       </div>
-                    <div className="divS30" />
                     <div className="divS33">Log In</div>
                    
                     <div className="divS37">
