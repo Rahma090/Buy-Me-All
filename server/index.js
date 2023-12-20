@@ -17,8 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../client/dist"));
 app.use(cors())
 
-app.post('/api/signup',authController.signUp)
-app.post('/api/signin',authController.signIn)
+app.post('/api/BuyMeAll/signup',authController.signUp)
+app.post('/api/BuyMeAll/signin',authController.signIn)
 app.use("/api/BuyMeAll",usersRoute)
 app.use("/api/BuyMeAll",ordersRouter)
 app.use("/api/BuyMeAll",favoriteRoute)
