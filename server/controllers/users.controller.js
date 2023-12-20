@@ -9,6 +9,7 @@ const AllUsers= async(req,res) => {
     }
 };
 
+
 const AddUser= async(req,res) => {
     try {
     const result=await Users.create(req.body)
