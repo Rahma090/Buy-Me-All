@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import ECommerceHomePage from './component/ECommerceHomePage/ECommerceHomePage.jsx';
-import {BrowserRouter as Router, Route, Switch, BrowserRouter, Routes} from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import SingnIn from './component/SingnIn/SingnIn.jsx';
 import SignUp from './component/SingnUp/SignUp.jsx';
+import ProductDetails from './component/ProductDetails/ProductDetails.jsx';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Route path='/ECommerceHomePage' element={ <ECommerceHomePage/>}></Route>
       <Route path='/SingnIn' element={ <SingnIn/>}></Route>
       <Route path='/SingnUp' element={<SignUp/>}></Route>
+      <Route path='/ProductDetails' element={<ProductDetails/>} ></Route>
    
 
  </Routes>
