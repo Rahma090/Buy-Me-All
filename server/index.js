@@ -3,7 +3,7 @@ const usersRoute =require('./routes/users.routes')
 const ordersRouter =require('./routes/orders.routes')
 const favoriteRoute =require('./routes/favorite.routes')
 const productRouter =require('./routes/product.routes')
-const categoryRoute =require('./routes/category.routes')
+const categoryRoute =require('./routes/category.route')
 const cors = require('cors')
 
 const db = require('./database-Sequelize');
@@ -22,6 +22,9 @@ app.use("/api/BuyMeAll",ordersRouter)
 app.use("/api/BuyMeAll",favoriteRoute)
 app.use("/api/BuyMeAll",productRouter)
 app.use("/api/BuyMeAll",categoryRoute)
+
+
+
 
 app.listen(PORT, function () {
   console.log("listening on port 3000!");
