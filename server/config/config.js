@@ -1,7 +1,7 @@
 const config={
-    database:"BuyMeAll",
+    database:"buyMeAll",
     user:"root",
-    password:"0000"
+    password:"53037912Aa*"
 }
 
 module.exports=config
