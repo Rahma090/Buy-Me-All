@@ -3,7 +3,8 @@ const usersRoute =require('./routes/users.routes')
 const ordersRouter =require('./routes/orders.routes')
 const favoriteRoute =require('./routes/favorite.routes')
 const productRouter =require('./routes/product.routes')
-const categoryRoute =require('./routes/category.routes')
+const categoryRoute =require('./routes/category.route')
+const authController =require('./controllers/auth.controller')
 const cors = require('cors')
 
 const db = require('./database-Sequelize');
@@ -16,7 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../client/dist"));
 app.use(cors())
 
-
+app.post('/api/signup',authController.signUp)
+app.post('/api/signin',authController.signIn)
 app.use("/api/BuyMeAll",usersRoute)
 app.use("/api/BuyMeAll",ordersRouter)
 app.use("/api/BuyMeAll",favoriteRoute)
