@@ -27,10 +27,16 @@
                   <div className="divS24">
                     <div className="divS25">Log in to Exclusive</div>
                     <div className="divS26">Enter your details below</div>
-                    <div className="divS29">Email or Phone Number</div>
+                    <div className="divS29">
+                      <div>Email or Phone Number</div>
+                      <input onChange={(e)=>{}}/>
+                    </div>
                     <div className="divS30" />
-                    <div className="divS31">Password</div>
-                    <div className="divS32" />
+                    <div className="divS31">
+                      <div>Password</div>
+                      <input onChange={(e)=>{}}/>
+                      </div>
+                    <div className="divS30" />
                     <div className="divS33">Log In</div>
                    
                     <div className="divS37">

@@ -27,13 +27,22 @@ const SignUp=(props) =>{
               <div className="divUp24">
                 <div className="divUp25">Create an account</div>
                 <div className="divUp26">Enter your details below</div>
-                <div className="divUp27">Name</div>
+                <div className="divUp27">
+                  <div>Name</div>
+                  <input type="text" onChange={()=>{}} />
+                  </div>
                 <div className="divUp28" />
-                <div className="divUp29">Email or Phone Number</div>
+                <div className="divUp29">
+                  <div>Email or Phone Number</div>
+                  <input type="text" onChange={()=>{}} />
+                  </div>
                 <div className="divUp30" />
-                <div className="divUp31">Password</div>
+                <div className="divUp31">
+                  <div>Password</div>
+                  <input type="text" onChange={()=>{}} />
+                  </div>
                 <div className="divUp32" />
-                <div className="divUp33">Create Account</div>
+                <div className="divUp33" onClick={()=>{}}>Create Account</div>
                 <div className="divUp34">
                   <div className="divUp35">
                     <img
