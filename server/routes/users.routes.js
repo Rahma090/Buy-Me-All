@@ -4,7 +4,6 @@ const { AllUsers,AddUser,UpdateUser,DeleteUser } = require('../controllers/users
 
 
 usersRoute.get('/users',AllUsers)
-usersRoute.post('/login',AddUser)
 usersRoute.put('/users/:id',UpdateUser)
 usersRoute.delete('/users/:id',DeleteUser)
 
