@@ -1,5 +1,10 @@
 const express = require("express");
-const itemRoutes = require('./routes/item.routes')
+const usersRoute =require('./routes/users.routes')
+const ordersRouter =require('./routes/orders.routes')
+const favoriteRoute =require('./routes/favorite.routes')
+const productRouter =require('./routes/product.routes')
+const categoryRoute =require('./routes/category.route')
+const authController =require('./controllers/auth.controller')
 const cors = require('cors')
 
 const db = require('./database-Sequelize');
@@ -12,7 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../client/dist"));
 app.use(cors())
 
-app.use("/api/restaurant", itemRoutes);
+app.post('/api/signup',authController.signUp)
+app.post('/api/signin',authController.signIn)
+app.use("/api/BuyMeAll",usersRoute)
+app.use("/api/BuyMeAll",ordersRouter)
+app.use("/api/BuyMeAll",favoriteRoute)
+app.use("/api/BuyMeAll",productRouter)
+app.use("/api/BuyMeAll",categoryRoute)
 
 app.listen(PORT, function () {
   console.log("listening on port 3000!");
