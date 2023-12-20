@@ -22,7 +22,6 @@ const OneCategory = async(req,res) => {
     }
 };
 
-
 const AddCategory = async(req,res) => {
     try {
         console.log(req.body)
