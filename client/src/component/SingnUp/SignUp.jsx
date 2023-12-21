@@ -3,6 +3,8 @@ import "./SignUp.css"
 import TopHeader from "../Top Header/TopHeader.jsx";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 const SignUp=(props) =>{
   return (
@@ -27,13 +29,44 @@ const SignUp=(props) =>{
               <div className="divUp24">
                 <div className="divUp25">Create an account</div>
                 <div className="divUp26">Enter your details below</div>
-                <div className="divUp27">Name</div>
-                <div className="divUp28" />
-                <div className="divUp29">Email or Phone Number</div>
-                <div className="divUp30" />
-                <div className="divUp31">Password</div>
-                <div className="divUp32" />
-                <div className="divUp33">Create Account</div>
+                <div className="divUp27">
+                <Box
+                            component="form"
+                            sx={{
+                            '& > :not(style)': { m: 1, width: '25ch' },
+                             }}
+                           noValidate
+                        autoComplete="off"
+                                        >
+                         <TextField id="standard-basic" label="Name" variant="standard" />
+                        </Box>
+                  </div>  
+                <div className="divUp29">
+                <Box
+                            component="form"
+                            sx={{
+                            '& > :not(style)': { m: 1, width: '25ch' },
+                             }}
+                           noValidate
+                        autoComplete="off"
+                                        >
+                         <TextField id="standard-basic" label="Email or Phone Number" variant="standard" />
+                        </Box>
+                  </div>
+                <div className="divUp31">
+                <Box
+                            component="form"
+                            sx={{
+                            '& > :not(style)': { m: 1, width: '25ch' },
+                             }}
+                           noValidate
+                        autoComplete="off"
+                                        >
+                         <TextField id="standard-basic" label="Password" variant="standard" />
+                        </Box>
+                  </div>
+                <div className="divUp33" onClick={()=>{}
+                        }>Create Account</div>
                 <div className="divUp34">
                   <div className="divUp35">
                     <img

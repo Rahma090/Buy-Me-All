@@ -28,6 +28,10 @@ const Product =(connection,DataTypes)=>{
         type: DataTypes.STRING,
         allowNull: true,
       },
+      seller_id:{
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
       
     
   })};
