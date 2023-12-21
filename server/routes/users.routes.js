@@ -1,5 +1,5 @@
 const usersRoute = require('express').Router();
-const { AllUsers,AddUser,UpdateUser,DeleteUser } = require('../controllers/users.controller');
+const { AllUsers,UpdateUser,DeleteUser } = require('../controllers/users.controller');
 
 
 

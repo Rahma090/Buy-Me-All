@@ -11,6 +11,17 @@ const AllCategory = async(req,res) => {
     }
 };
 
+const OneCategory = async(req,res) => {
+    try {
+    const result=await Categories.findOne({where:req.params},{
+        include: Product
+      });
+    res.json(result)   
+    } catch (error) {
+    res.send(error)    
+    }
+};
+
 const AddCategory = async(req,res) => {
     try {
         console.log(req.body)
@@ -31,4 +42,4 @@ const DeleteCategory= async(req,res) => {
     }
 };
 
-module.exports={AllCategory,AddCategory,DeleteCategory}
+module.exports={AllCategory,OneCategory,AddCategory,DeleteCategory}
