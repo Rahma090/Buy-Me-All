@@ -1,4 +1,8 @@
-import * as React from "react";
+import   React,{useState} from "react";
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../AuthorContext/authContext.jsx';
+import Cookies from 'js-cookie';
 import "./SignUp.css"
 import TopHeader from "../Top Header/TopHeader.jsx";
 import Header from "../Header/Header.jsx";
@@ -13,7 +17,48 @@ import FormLabel from '@mui/material/FormLabel';
 
   
 const SignUp=(props) =>{
-  const [role,setRole]=React.useState("client")
+  const [username, setUsername] = useState("")
+  const [userEmail, setUserEmail] = useState("")
+  const [userpassword, setUserpassword] = useState("")
+  const [role,setRole]=useState("client")
+  const { setToken } = useAuth();
+  const navigate = useNavigate();
+
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSignup = async (event) => {
+
+    try {
+      const response = await axios.post('http://localhost:3000/api/BuyMeAll/signup', {
+        user_name: username ,
+        user_phOrEmail: userEmail,
+        user_password: userpassword,
+        user_role: role,
+      });
+      console.log(response);
+      const { user_phOrEmail, user_name, tok, id } = response.data;
+
+      if (user_phOrEmail && user_name && tok) {
+        Cookies.set('authToken', tok, { expires: 7 }); 
+        setToken(tok);
+        
+        setSuccessMessage('Registration successful');
+        setErrorMessage('');
+
+        navigate(`/ECommerceHomePage`);
+      } else {
+        setSuccessMessage('');
+        setErrorMessage('!Registration failed. Please try again.');
+      }
+    } catch (error) {
+      setSuccessMessage('');
+      setErrorMessage('Error during registration. Please try again.');
+      console.error('Error during registration:', error);
+    }
+  };
+
+
   return (
     <>
       <div className="divSignUp">
@@ -45,7 +90,7 @@ const SignUp=(props) =>{
                            noValidate
                         autoComplete="off"
                                         >
-                         <TextField id="standard-basic" label="Name" variant="standard" />
+                         <TextField id="standard-basic" label="Name" variant="standard" onChange={(event)=>{setUsername(event.target.value)}}/>
                         </Box>
                   </div>  
                 <div className="divUp29">
@@ -57,7 +102,7 @@ const SignUp=(props) =>{
                            noValidate
                         autoComplete="off"
                                         >
-                         <TextField id="standard-basic" label="Email or Phone Number" variant="standard" />
+                         <TextField id="standard-basic" label="Email or Phone Number" variant="standard" onChange={(event)=>{setUserEmail(event.target.value)}} />
                         </Box>
                   </div>
                 <div className="divUp31">
@@ -69,7 +114,7 @@ const SignUp=(props) =>{
                            noValidate
                         autoComplete="off"
                                         >
-                         <TextField id="standard-basic" label="Password" variant="standard" />
+                         <TextField id="standard-basic" label="Password" variant="standard"  onChange={(event)=>{setUserpassword(event.target.value)}} />
                         </Box>
                   </div>
                   <div className="role">
@@ -86,8 +131,7 @@ const SignUp=(props) =>{
       </RadioGroup>
     </FormControl>
                   </div>
-                <div className="divUp33" onClick={()=>{}
-                        }>Create Account</div>
+                <div className="divUp33" onClick={()=>{handleSignup()}}>Create Account</div>
                 <div className="divUp34">
                   <div className="divUp35">
                     <img
