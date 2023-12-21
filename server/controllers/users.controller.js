@@ -1,4 +1,5 @@
 const {Users}=require('../database-Sequelize/index')
+const jwt = require('jsonwebtoken');
 
 const AllUsers= async(req,res) => {
     try {
@@ -9,11 +10,18 @@ const AllUsers= async(req,res) => {
     }
 };
 
+const generateToken = (userId, userName) => {
+    const expiresIn = 60 * 60 * 24;
+    return jwt.sign({ userId, userName }, 'secretKey', { expiresIn: expiresIn });
+  };
+
 
 const AddUser= async(req,res) => {
     try {
     const result=await Users.create(req.body)
-    res.json(result)   
+    const tok=generateToken(result.dataValues.id,result.dataValues.user_name)  
+    result.dataValues.tok=tok
+    res.send(result.dataValues)
     } catch (error) {
     res.send(error)    
     }
