@@ -3806,9 +3806,9 @@
       align-self: stretch;
       display: flex;
       margin-top: 32px;
-      width: 100%;
+      width: 1500px;
       flex-direction: column;
-      padding: 50px 0 24px;
+      
     }
     @media (max-width: 991px) {
       .div-309 {

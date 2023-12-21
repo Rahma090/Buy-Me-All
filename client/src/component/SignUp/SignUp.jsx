@@ -5,8 +5,15 @@ import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
+  
 const SignUp=(props) =>{
+  const [role,setRole]=React.useState("client")
   return (
     <>
       <div className="divSignUp">
@@ -33,7 +40,7 @@ const SignUp=(props) =>{
                 <Box
                             component="form"
                             sx={{
-                            '& > :not(style)': { m: 1, width: '25ch' },
+                            '& > :not(style)': { m: 1, width: '35ch' },
                              }}
                            noValidate
                         autoComplete="off"
@@ -45,7 +52,7 @@ const SignUp=(props) =>{
                 <Box
                             component="form"
                             sx={{
-                            '& > :not(style)': { m: 1, width: '25ch' },
+                            '& > :not(style)': { m: 1, width: '35ch' },
                              }}
                            noValidate
                         autoComplete="off"
@@ -57,13 +64,27 @@ const SignUp=(props) =>{
                 <Box
                             component="form"
                             sx={{
-                            '& > :not(style)': { m: 1, width: '25ch' },
+                            '& > :not(style)': { m: 1, width: '35ch' },
                              }}
                            noValidate
                         autoComplete="off"
                                         >
                          <TextField id="standard-basic" label="Password" variant="standard" />
                         </Box>
+                  </div>
+                  <div className="role">
+                  <FormControl>
+      <FormLabel id="demo-controlled-radio-buttons-group">Role</FormLabel>
+      <RadioGroup
+        aria-labelledby="demo-controlled-radio-buttons-group"
+        name="controlled-radio-buttons-group"
+        value={role}
+        onChange={(e)=>{setRole(e.target.value)}}
+      >
+        <FormControlLabel value="client" control={<Radio />} label="Client" />
+        <FormControlLabel value="seller" control={<Radio />} label="Seller" />
+      </RadioGroup>
+    </FormControl>
                   </div>
                 <div className="divUp33" onClick={()=>{}
                         }>Create Account</div>
