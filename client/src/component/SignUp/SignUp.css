@@ -3,6 +3,7 @@
   display: flex;
   padding-bottom: 36px;
   flex-direction: column;
+  width: 1398px;
 }
 .divUp {
   background-color: #000;
@@ -260,4 +261,7 @@
   width: 53px;
   overflow: hidden;
   align-self: center;
+}
+.role {
+  margin-top: 20px;
 }
