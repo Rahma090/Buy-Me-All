@@ -22,6 +22,17 @@ const GetProduct=async(req,res) => {
     }
 }
 
+const GetSellerProd=async(req,res) => {
+    try {
+    const result=await Product.findOne({where:{seller_id:req.params.id}},{
+        include:{model:Categories}
+    });
+    res.json(result) 
+    } catch (error) {
+        res.send(error)
+    }
+}
+
 const AddProduct = async(req,res) => {
     try {
     const result=await Product.create(req.body)
@@ -49,4 +60,4 @@ const DeleteProduct= async(req,res) => {
     }
 };
 
-module.exports={AllProduct,GetProduct,AddProduct,UpdateProduct,DeleteProduct}
+module.exports={AllProduct,GetProduct,GetSellerProd,AddProduct,UpdateProduct,DeleteProduct}
