@@ -1,6 +1,7 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './AuthorContext/authContext.jsx';
 import ECommerceHomePage from './component/ECommerceHomePage/ECommerceHomePage.jsx';
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import SignIn from './component/SignIn/SignIn.jsx';
 import SignUp from './component/SignUp/SignUp.jsx';
 import ProductDetails from './component/ProductDetails/ProductDetails.jsx';
@@ -8,9 +9,10 @@ import Admin from './component/Admin/Admin.jsx';
 
 function App() {
   return (
+
     <BrowserRouter>
     <Routes>
-      <Route path='/ECommerceHomePage' element={ <ECommerceHomePage/>}></Route>
+      <Route path='/' element={ <ECommerceHomePage/>}></Route>
       <Route path='/SignIn' element={ <SignIn/>}></Route>
 
       <Route path='/SignUp' element={<SignUp/>}></Route>
@@ -20,6 +22,7 @@ function App() {
 
  </Routes>
  </BrowserRouter>
+
   );
 }
 
