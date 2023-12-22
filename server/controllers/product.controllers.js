@@ -3,13 +3,35 @@ const {Product, Categories}=require('../database-Sequelize/index')
 const AllProduct = async(req,res) => {
     try {
     const result=await Product.findAll({
-        includes:Categories
+        include:{model:Categories},
     });
     res.json(result)   
     } catch (error) {
     res.send(error)    
     }
 };
+
+const GetProduct=async(req,res) => {
+    try {
+    const result=await Product.findOne({where:{id:req.params.id}},{
+        include:{model:Categories}
+    });
+    res.json(result) 
+    } catch (error) {
+        res.send(error)
+    }
+}
+
+const GetSellerProd=async(req,res) => {
+    try {
+    const result=await Product.findOne({where:{seller_id:req.params.id}},{
+        include:{model:Categories}
+    });
+    res.json(result) 
+    } catch (error) {
+        res.send(error)
+    }
+}
 
 const AddProduct = async(req,res) => {
     try {
@@ -38,4 +60,4 @@ const DeleteProduct= async(req,res) => {
     }
 };
 
-module.exports={AllProduct,AddProduct,UpdateProduct,DeleteProduct}
+module.exports={AllProduct,GetProduct,GetSellerProd,AddProduct,UpdateProduct,DeleteProduct}

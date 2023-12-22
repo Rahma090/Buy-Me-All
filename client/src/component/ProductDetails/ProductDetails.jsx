@@ -12,7 +12,6 @@ const ProductDetails=() =>{
       <div className="divP">
       <TopHeader/>
       <Header/>
-
         <div className="divProduct22" />
         <div className="divProduct23">
           <div className="divProduct24">
