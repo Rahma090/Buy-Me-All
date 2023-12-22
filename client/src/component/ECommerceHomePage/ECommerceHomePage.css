@@ -4,6 +4,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
     .div-2 {
       justify-content: center;
@@ -13,7 +14,7 @@
       display: flex;
       width: 100%;
       flex-direction: column;
-      padding: 12px 60px;
+      padding: 12px 0px;
     }
     @media (max-width: 991px) {
       .div-2 {
@@ -3806,13 +3807,14 @@
       align-self: stretch;
       display: flex;
       margin-top: 32px;
-      width: 1500px;
+      width: 100%;
       flex-direction: column;
       
     }
-    @media (max-width: 991px) {
+
+    @media (max-width: 10000px) {
       .div-309 {
-        max-width: 100%;
+        max-width: 150%;
       }
     }
     .div-310 {
@@ -3821,9 +3823,8 @@
       display: flex;
       margin-top: 30px;
       width: 100%;
-      max-width: 1170px;
       gap: 20px;
-      padding: 0 20px;
+
     }
     @media (max-width: 991px) {
       .div-310 {
