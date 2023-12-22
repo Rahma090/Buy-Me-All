@@ -3,6 +3,7 @@
   display: flex;
   padding-bottom: 36px;
   flex-direction: column;
+  width: 100%;
 }
 .divS {
   background-color: #000;
