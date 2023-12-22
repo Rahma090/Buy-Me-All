@@ -9,7 +9,7 @@ const ECommerceHomePage=(props) =>{
     <>
       <div className="div">
        <TopHeader/>
-        <Header/>
+        <Header value={0}/>
         <div className="div-22" />
         <div className="div-23">
           <div className="div-24">
