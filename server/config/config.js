@@ -1,7 +1,8 @@
 const config={
     database:"BuyMeAll",
     user:"root",
-    password:"53037912Aa*"
+    password:"fill_me"
+
 
 
 }
