@@ -13,9 +13,11 @@ const AllCategory = async(req,res) => {
 
 const OneCategory = async(req,res) => {
     try {
-    const result=await Categories.findOne({where:req.params},{
-        include: Product
-      });
+    const result=await Categories.findOne({
+        include:{model:Product}
+    },
+          {where:req.params.id}
+          );
     res.json(result)   
     } catch (error) {
     res.send(error)    
