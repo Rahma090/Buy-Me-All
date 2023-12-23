@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path='/' element={ <ECommerceHomePage/>}></Route>
       <Route path='/SignIn' element={ <SignIn/>}></Route>
-
+   
       <Route path='/SignUp' element={<SignUp/>}></Route>
       <Route path='/ProductDetails' element={<ProductDetails/>} ></Route>
       <Route path='/Admin' element={<Admin/>}></Route>

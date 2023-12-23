@@ -46,7 +46,7 @@ const SignUp=(props) =>{
         setSuccessMessage('Registration successful');
         setErrorMessage('');
 
-        navigate(`/ECommerceHomePage`);
+        navigate(`/`);
       } else {
         setSuccessMessage('');
         setErrorMessage('!Registration failed. Please try again.');
