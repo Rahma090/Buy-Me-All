@@ -17,10 +17,10 @@ function App() {
       <Route path='/' element={ <ECommerceHomePage/>}></Route>
       
       <Route path='/SignIn' element={ <SignIn/>}></Route>
+      <Route path='/SignUp' element={<SignUp/>}></Route>
       <Route path='/Seller' element={ <Seller/>}></Route>
       <Route path='/Profile' element={ <Profile/>}></Route>
-      <Route path='/SignUp' element={<SignUp/>}></Route>
-      <Route path='/ProductDetails' element={<ProductDetails/>} ></Route>
+      <Route path='/Product/:id' element={<ProductDetails/>} ></Route>
       <Route path='/Admin' element={<Admin/>}></Route>
    
 
