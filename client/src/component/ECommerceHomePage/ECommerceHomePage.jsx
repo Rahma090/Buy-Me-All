@@ -1,6 +1,6 @@
 import  React,{useState,useEffect} from "react";
 import './ECommerceHomePage.css'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
@@ -12,20 +12,6 @@ const ECommerceHomePage=(props) =>{
   const [refrPo,setRefrPo]=useState(false)
   const [postData,setPostData]=useState([])
   const [catData,setCatData]=useState([])
-
-  const navigate=useNavigate()
-
-  const taktak=(str)=>{
-    var start=0
-    var arr=[]
-    for (var i=0;i<str.length;i++){
-        if(str[i]===','){
-            arr.push(str.slice(start,i))
-            start=i+1
-        }
-    }
-    return arr
-}
 
   useEffect(() => {
     axios.get("http://localhost:3000/api/BuyMeAll/products")
@@ -61,8 +47,6 @@ const ECommerceHomePage=(props) =>{
       });
   }, [refrPo]);
 
-  const handleDetails=(ids)=>{
-   navigate(`/Product/${ids}`) 
 const  handlecategory= (ids) => {
     axios.get(`http://localhost:3000/api/BuyMeAll/category/${ids}`)
       .then((response) => {
@@ -178,9 +162,7 @@ const  handlecategory= (ids) => {
               />
             </div>
           </div>
-
           <div className="div-150" >   
-
             {catData.map((e,i)=>(
                <div className="div-151" onClick={()=>{handlecategory(e.id)}}  >
 
@@ -194,8 +176,6 @@ const  handlecategory= (ids) => {
         
             
             ))}
-
-
             
           </div>
           <div className="div-278" onClick={()=>{handleAll()}}   >View All Products</div>
@@ -213,14 +193,14 @@ const  handlecategory= (ids) => {
 
 
           <div className="div-206">
-          {/* <div className='seller-products'>
+          <div className='seller-products'>
             {postData.map((el,i)=>(
           <div key={i} className="one-product">
               <div className="div-95">
                 <div className="div-96">
                   <img
                     loading="lazy"
-                    src={taktak(el.image)[0]}
+                    src={el.image}
                     className="img-17"
                   />
                 </div>
@@ -232,7 +212,7 @@ const  handlecategory= (ids) => {
                     className="img-18"
                     />
                   </div>
-                    <div onClick={()=>{handleDetails(el.id)}}>
+                    <div >
                       
                     <img
                         loading="lazy"
@@ -245,7 +225,7 @@ const  handlecategory= (ids) => {
               <div className="div-99">{el.product_name}</div>
               <div className="div-100">
                 <div className="div-101">{el.price}$</div>
-              
+                {/*      */}
               </div>
               <div className="div-103">
                 <img
@@ -256,7 +236,7 @@ const  handlecategory= (ids) => {
                 <div className="div-104">({el.quantity})</div>
               </div>
             </div>))}
-            </div> */}
+            </div>
           </div>
           
           
