@@ -168,7 +168,11 @@ function Header({value}) {
     width: 32,
     height: 32,
     cursor: 'pointer',
+    bgcolor: 'rgba(219, 212, 215, 0.91)',
+    color: 'white',
+    '&:hover': { bgcolor: 'rgba(255, 0, 0, 0.9)', color: 'white' },
   }}
+  
   onClick={handleOpenUserMenu}
 />
               </IconButton>

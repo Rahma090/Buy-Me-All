@@ -154,12 +154,12 @@ const Profile = () => {
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <Button type="submit" variant="contained">
+                  <Button  type="submit" variant="contained" color="success">
                     Save
                   </Button>
                 </Grid>
                 <Grid item xs={6}>
-                  <Button onClick={handleClickCancel} variant="outlined">
+                  <Button onClick={handleClickCancel} variant="outlined" color="error" >
                     Cancel
                   </Button>
                 </Grid>
