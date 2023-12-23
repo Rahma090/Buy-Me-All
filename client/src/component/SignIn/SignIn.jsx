@@ -35,7 +35,10 @@ import axios from "axios";
             setErrorMessage('');
            
             setSuccessMessage('signup successful')
-            navigate(`/ECommerceHomePage`);
+            response.data.user_role="admin"?navigate(`/admin/${response.data.id}`)
+            :response.data.user_role="seller"
+            ?navigate(`/seller/${response.data.id}`)
+            : navigate(`/`);
           } else {
             setErrorMessage('Login failed. Please check your credentials.');
          
