@@ -14,7 +14,6 @@ const AllProduct = async(req,res) => {
 const GetProduct=async(req,res) => {
     try {
     const result=await Product.findOne({
-        
         include:{model:Categories}
     },{where:{id:req.params.id}})
     res.json(result) 

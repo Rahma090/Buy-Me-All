@@ -35,7 +35,7 @@ import axios from "axios";
             setErrorMessage('');
            
             setSuccessMessage('signup successful')
-            navigate(`/ECommerceHomePage`);
+            navigate(`/`);
           } else {
             setErrorMessage('Login failed. Please check your credentials.');
          
