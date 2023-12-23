@@ -4,7 +4,6 @@ const config={
     password:"fill_me"
 
 
-
 }
 
 module.exports=config

@@ -1,6 +1,6 @@
 import  React,{useState,useEffect} from "react";
 import './ECommerceHomePage.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
@@ -12,6 +12,20 @@ const ECommerceHomePage=(props) =>{
   const [refrPo,setRefrPo]=useState(false)
   const [postData,setPostData]=useState([])
   const [catData,setCatData]=useState([])
+
+  const navigate=useNavigate()
+
+  const taktak=(str)=>{
+    var start=0
+    var arr=[]
+    for (var i=0;i<str.length;i++){
+        if(str[i]===','){
+            arr.push(str.slice(start,i))
+            start=i+1
+        }
+    }
+    return arr
+}
 
   useEffect(() => {
     axios.get("http://localhost:3000/api/BuyMeAll/products")
@@ -47,6 +61,8 @@ const ECommerceHomePage=(props) =>{
       });
   }, [refrPo]);
 
+  const handleDetails=(ids)=>{
+   navigate(`/Product/${ids}`) 
 const  handlecategory= (ids) => {
     axios.get(`http://localhost:3000/api/BuyMeAll/category/${ids}`)
       .then((response) => {
@@ -200,7 +216,7 @@ const  handlecategory= (ids) => {
                 <div className="div-96">
                   <img
                     loading="lazy"
-                    src={el.image}
+                    src={taktak(el.image)[0]}
                     className="img-17"
                   />
                 </div>
@@ -212,7 +228,7 @@ const  handlecategory= (ids) => {
                     className="img-18"
                     />
                   </div>
-                    <div >
+                    <div onClick={()=>{handleDetails(el.id)}}>
                       
                     <img
                         loading="lazy"
