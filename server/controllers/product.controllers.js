@@ -13,9 +13,9 @@ const AllProduct = async(req,res) => {
 
 const GetProduct=async(req,res) => {
     try {
-    const result=await Product.findOne({where:{id:req.params.id}},{
+    const result=await Product.findOne({
         include:{model:Categories}
-    });
+    },{where:{id:req.params.id}});
     res.json(result) 
     } catch (error) {
         res.send(error)
@@ -53,7 +53,7 @@ const UpdateProduct = async(req,res) => {
 
 const DeleteProduct= async(req,res) => {
     try {
-    const result=await Categories.destroy({where:req.params})
+    const result=await Product.destroy({where:req.params})
     res.json(result)   
     } catch (error) {
     res.send(error)    

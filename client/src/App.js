@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './AuthorContext/authContext.jsx';
 import ECommerceHomePage from './component/ECommerceHomePage/ECommerceHomePage.jsx';
 import SignIn from './component/SignIn/SignIn.jsx';
@@ -17,7 +17,7 @@ function App() {
 
       <Route path='/SignUp' element={<SignUp/>}></Route>
       <Route path='/ProductDetails' element={<ProductDetails/>} ></Route>
-      <Route path='/Admin' element={<Admin/>}></Route>
+      <Route path='/admin/:id' element={<Admin/>}></Route>
    
 
  </Routes>

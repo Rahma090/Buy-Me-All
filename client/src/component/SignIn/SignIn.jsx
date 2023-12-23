@@ -1,8 +1,8 @@
 import   React,{useState} from "react";
 import axios from "axios";
     import './SignIn.css'
-    import { useAuth } from '../../AuthorContext/authContext.jsx';
-    import { useNavigate } from 'react-router-dom';
+    // import { useAuth } from '../../AuthorContext/authContext.jsx';
+    import { Link, useNavigate } from 'react-router-dom';
     import Cookies from 'js-cookie';
     import TopHeader from "../Top Header/TopHeader.jsx";
     import Header from "../Header/Header.jsx";
@@ -15,7 +15,7 @@ import axios from "axios";
       const [userEmail, setUserEmail] = useState("")
       const [successMessage, setSuccessMessage] = useState('');
       const [errorMessage, setErrorMessage] = useState('');
-      const { setToken } = useAuth();
+      // const { setToken } = useAuth();
       const navigate = useNavigate();
       const handleSubmit = async (event) => {
           try {
@@ -31,11 +31,15 @@ import axios from "axios";
             const { tok } = response.data;
             console.log(tok)
             Cookies.set('authToken', tok, { expires: 60*60*24 })
-            setToken(tok);
+            // setToken(tok);
             setErrorMessage('');
            
             setSuccessMessage('signup successful')
-            navigate(`/ECommerceHomePage`);
+            response.data.user_role="admin"?navigate(`/admin/${response.data.id}`)
+            :response.data.user_role="seller"
+            ?navigate(`/seller/${response.data.id}`)
+            : navigate(`/`);
+
           } else {
             setErrorMessage('Login failed. Please check your credentials.');
          
@@ -46,13 +50,13 @@ import axios from "axios";
           console.error('Error during login:', error);
         }
       };
-
+   
 
       return (
         <>
           <div className="divSignIn">
           <TopHeader/>
-          <Header/>
+          <Header value={3}/>
     
             <div className="divS" />
             <div className="divS21">
@@ -97,7 +101,7 @@ import axios from "axios";
                     <div className="divS33" onClick={()=>{handleSubmit()}}>Log In</div>
                    
                     <div className="divS37">
-                      <div className="divS38">Forget Password?</div>
+                    <Link to="/SignUp">  <div className="divS38" >Don't have an account? Sign Up</div></Link> 
                     </div>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 import   React,{useState} from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../AuthorContext/authContext.jsx';
+import {Link, useNavigate } from 'react-router-dom';
+// import { useAuth } from '../../AuthorContext/authContext.jsx';
 import Cookies from 'js-cookie';
 import "./SignUp.css"
 import TopHeader from "../Top Header/TopHeader.jsx";
@@ -21,7 +21,7 @@ const SignUp=(props) =>{
   const [userEmail, setUserEmail] = useState("")
   const [userpassword, setUserpassword] = useState("")
   const [role,setRole]=useState("client")
-  const { setToken } = useAuth();
+  // const { setToken } = useAuth();
   const navigate = useNavigate();
 
   const [successMessage, setSuccessMessage] = useState('');
@@ -41,7 +41,7 @@ const SignUp=(props) =>{
 
       if (user_phOrEmail && user_name && tok) {
         Cookies.set('authToken', tok, { expires: 7 }); 
-        setToken(tok);
+        // setToken(tok);
         
         setSuccessMessage('Registration successful');
         setErrorMessage('');
@@ -63,7 +63,7 @@ const SignUp=(props) =>{
     <>
       <div className="divSignUp">
       <TopHeader/>
-      <Header/>
+      <Header value={3}/>
 
         <div className="divUp" />
         <div className="divUp21">
@@ -145,7 +145,8 @@ const SignUp=(props) =>{
                 <div className="divUp37">
                   <div className="divUp38">Already have account?</div>
                   <div className="divUp39">
-                    <div className="divUp40">Log in</div>
+
+                    <Link to="/SignIn"><div className="divUp40">Log in</div></Link>
                     <img
                       loading="lazy"
                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs="
