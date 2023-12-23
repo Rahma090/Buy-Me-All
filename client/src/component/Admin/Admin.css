@@ -320,6 +320,18 @@
       width: 100%;
     }
   }
+  .colAdmin222 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 100%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .colAdmin222 {
+      width: 100%;
+    }
+  }
   .divAdmin29 {
     backdrop-filter: blur(15px);
     background-color: rgba(37, 35, 46, 0.3);
@@ -655,9 +667,23 @@
     line-height: normal;
     width: 49%;
     margin-left: 20px;
+    
   }
   @media (max-width: 991px) {
     .columnAdmin3 {
+      width: 100%;
+    }
+  }
+  .columnAdmin333 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 1454px;
+    margin-left: 20px;
+    margin-top: 47px;
+  }
+  @media (max-width: 991px) {
+    .columnAdmin333 {
       width: 100%;
     }
   }

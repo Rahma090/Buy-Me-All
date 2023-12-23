@@ -50,9 +50,7 @@ import axios from "axios";
           console.error('Error during login:', error);
         }
       };
-      const handleClick=()=> {
-        navigate('/SignUp')
-      }
+   
 
       return (
         <>

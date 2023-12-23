@@ -6,17 +6,18 @@ import axios from "axios"
 import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import ListCategories from "./ListCategories";
 
 const Admin=(props)=> {
   const [data, setData] = useState([]);
   const [refrech,setRefrech]=useState(false)
-  const [users,setUsers]=useState([])
-  const [one,setOne]=useState({})
+  const [users,setUsers]=useState("")
+  const [one,setOne]=useState({}) 
+  const [two,setTwo]=useState("1") 
   const location = useLocation();
   const idAdmin = location.pathname.split('/')[2];
   var Admin = data.filter((e) => e.id === Number(idAdmin));
-  var clients = data.filter((e) => e.user_role === "client");
-  var sellers = data.filter((e) => e.user_role === "seller");
+ 
  
 
 
@@ -26,7 +27,6 @@ const Admin=(props)=> {
         const res = await axios.get('http://localhost:3000/api/BuyMeAll/users');
 
         setData(res.data)
-        console.log(res.data);
 
       } catch (err) {
         console.log(err);
@@ -78,8 +78,13 @@ const Admin=(props)=> {
                
                   
                   </div>
-                  <div className="divAdmin15" onClick={()=>{setUsers(clients)
-                   setOne({})}}>
+
+
+                  <div className="divAdmin15" onClick={()=>{
+                      
+                  setUsers("client")
+                  setOne({})
+                  setTwo("1")}}>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ad67e24eee99acf595ceea4cfa35ee5d01f5d565023cd7b1ba4265fd85ffef3?"
@@ -87,8 +92,14 @@ const Admin=(props)=> {
                     />
                     <div className="divAdmin16">Clientes</div>
                   </div>
-                  <div className="divAdmin15" onClick={()=>{setUsers(sellers)
-                  setOne({})}}>
+
+
+
+                  <div className="divAdmin15" onClick={()=>{
+                    
+                  setUsers("seller")
+                  setOne({})
+                  setTwo("1")}}>
                   <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/85ef95a54d33f89a22b913eb3571f1204f8b42cca07f320006d7eee555fa0364?"
@@ -96,7 +107,26 @@ const Admin=(props)=> {
                     />
                     <div className="divAdmin16">Sellers</div>
                   </div>
-                  <div className="divAdmin17" onClick={()=>{}}>
+
+
+
+                  <div className="divAdmin15" onClick={()=>{
+                      
+                      setUsers("client")
+                      setOne({})
+                      setTwo("2")}}>
+                        <img
+                          loading="lazy"
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/463861501310dc27db182a16aedd158acdfc08475c9e0e7c42a9a515a3b9a852?"
+                          className="imgAdmin"
+                        />
+                        <div className="divAdmin16">categories</div>
+                      </div>
+
+
+
+                  
+                  <div className="divAdmin17" onClick={()=>{setTwo("3")}}>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c05468233b11f9536a72cead6cc036c821fb23aaf6166b914842d292dfe5c51?"
@@ -104,6 +134,8 @@ const Admin=(props)=> {
                     />
                     <div className="divAdmin18" ><h1>history</h1> </div>
                   </div>
+
+
                 </div>
                 <div className="divAdmin25">
                   <img
@@ -119,14 +151,18 @@ const Admin=(props)=> {
               </div>
             </div>
           </div>
-          <div className="colAdmin2">
-         <ListClient users={users} setOne={setOne} handleDelete={handleDelete}/>
-          </div>
-          <div className="columnAdmin3">
-          <ClientDetails one={one}/>
+         
+          {two==="1" ? <div className="colAdmin2">  <ListClient users={users} setOne={setOne} handleDelete={handleDelete}/> </div> 
+          :<></>}
+        
+         
+          
+        { two==="1" ? <div className="columnAdmin3"><ClientDetails one={one}/></div>
+        :two==="2"?<div className="columnAdmin333"><ListCategories/></div>
+        :<></>}
           </div>
         </div>
-      </div>
+      
 
     </>
   );

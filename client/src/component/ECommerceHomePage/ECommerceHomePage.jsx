@@ -128,7 +128,7 @@ const ECommerceHomePage=(props) =>{
               />
             </div>
           </div>
-          <div className="div-150">   
+          {/* <div className="div-150">   
             {catData.map((e,i)=>(
                <div className="div-151">
                <img
@@ -141,7 +141,7 @@ const ECommerceHomePage=(props) =>{
         
             
             ))}
-          </div>
+          </div> */}
           <div className="div-163" />
           <div className="div-199">
             <div className="div-200">
@@ -156,7 +156,7 @@ const ECommerceHomePage=(props) =>{
 
 
           <div className="div-206">
-          <div className='seller-products'>
+          {/* <div className='seller-products'>
             {postData.map((el,i)=>(
           <div key={i} className="one-product">
               <div className="div-95">
@@ -188,7 +188,7 @@ const ECommerceHomePage=(props) =>{
               <div className="div-99">{el.product_name}</div>
               <div className="div-100">
                 <div className="div-101">{el.price}$</div>
-                {/*      */}
+              
               </div>
               <div className="div-103">
                 <img
@@ -199,7 +199,7 @@ const ECommerceHomePage=(props) =>{
                 <div className="div-104">({el.quantity})</div>
               </div>
             </div>))}
-            </div>
+            </div> */}
           </div>
           
           <div className="div-278">View All Products</div>

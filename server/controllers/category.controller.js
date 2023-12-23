@@ -44,4 +44,36 @@ const DeleteCategory= async(req,res) => {
     }
 };
 
-module.exports={AllCategory,OneCategory,AddCategory,DeleteCategory}
+const updateCategory = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { ca_name, ca_img } = req.body; // Assuming you want to update the category name and image
+  
+      // Check if the category with the given ID exists
+      const existingCategory = await Categories.findByPk(id);
+  
+      if (!existingCategory) {
+        return res.status(404).json({ error: 'Category not found' });
+      }
+  
+      // Update the category with the new values
+      const updatedCategory = await Categories.update(
+        { ca_name, ca_img },
+        { where: { id } }
+      );
+  
+      res.json(updatedCategory);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
+  };
+  
+  
+  
+
+
+
+
+
+module.exports={AllCategory,OneCategory,AddCategory,DeleteCategory,updateCategory }
