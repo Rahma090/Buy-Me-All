@@ -178,7 +178,9 @@ const  handlecategory= (ids) => {
               />
             </div>
           </div>
+
           <div className="div-150" >   
+
             {catData.map((e,i)=>(
                <div className="div-151" onClick={()=>{handlecategory(e.id)}}  >
 
@@ -192,6 +194,8 @@ const  handlecategory= (ids) => {
         
             
             ))}
+
+
             
           </div>
           <div className="div-278" onClick={()=>{handleAll()}}   >View All Products</div>
@@ -209,7 +213,7 @@ const  handlecategory= (ids) => {
 
 
           <div className="div-206">
-          <div className='seller-products'>
+          {/* <div className='seller-products'>
             {postData.map((el,i)=>(
           <div key={i} className="one-product">
               <div className="div-95">
@@ -241,7 +245,7 @@ const  handlecategory= (ids) => {
               <div className="div-99">{el.product_name}</div>
               <div className="div-100">
                 <div className="div-101">{el.price}$</div>
-                {/*      */}
+              
               </div>
               <div className="div-103">
                 <img
@@ -252,7 +256,7 @@ const  handlecategory= (ids) => {
                 <div className="div-104">({el.quantity})</div>
               </div>
             </div>))}
-            </div>
+            </div> */}
           </div>
           
           
