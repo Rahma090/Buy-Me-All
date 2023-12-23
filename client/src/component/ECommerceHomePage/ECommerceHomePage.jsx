@@ -1,19 +1,44 @@
 import  React,{useState,useEffect} from "react";
 import './ECommerceHomePage.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import TopHeader from "../Top Header/TopHeader.jsx"
 
 
-
+// http://localhost:3000/api/BuyMeAll/category
 const ECommerceHomePage=(props) =>{
   const [refrPo,setRefrPo]=useState(false)
   const [postData,setPostData]=useState([])
   const [catData,setCatData]=useState([])
 
+  const navigate=useNavigate()
+
+  const taktak=(str)=>{
+    var start=0
+    var arr=[]
+    for (var i=0;i<str.length;i++){
+        if(str[i]===','){
+            arr.push(str.slice(start,i))
+            start=i+1
+        }
+    }
+    return arr
+}
+
   useEffect(() => {
+    axios.get("http://localhost:3000/api/BuyMeAll/products")
+      .then((response) => {
+        const responseData = response.data;
+          setPostData(responseData)
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, [refrPo]);
+
+   useEffect(() => {
     axios.get("http://localhost:3000/api/BuyMeAll/products")
       .then((response) => {
         const responseData = response.data;
@@ -35,40 +60,65 @@ const ECommerceHomePage=(props) =>{
         console.error("Error fetching data:", error);
       });
   }, [refrPo]);
+
+  const handleDetails=(ids)=>{
+   navigate(`/Product/${ids}`) 
+const  handlecategory= (ids) => {
+    axios.get(`http://localhost:3000/api/BuyMeAll/category/${ids}`)
+      .then((response) => {
+        const responseData = response.data[0].products;
+          setPostData(responseData)
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }
+
+  const  handleAll= () => {
+    axios.get(`http://localhost:3000/api/BuyMeAll/products`)
+      .then((response) => {
+        const responseData = response.data;
+          setPostData(responseData)
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }
+
   return (
     <>
       <div className="div">
        <TopHeader/>
         <Header value={0}/>
-        <div className="div-22" />
+        {/* <div className="div-22" /> */}
         <div className="div-23">
           <div className="div-24">
-            <div className="div-25">
-              <div className="div-26">
+            {/* <div className="div-25"> */}
+              {/* <div className="div-26">
                 <div className="div-27">Woman’s Fashion</div>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/419e3d65c94f39310352312d26156e850a5fd9835e5ec39a019f5290ed34bf71?"
                   className="img-4"
                 />
-              </div>
-              <div className="div-28">
+              </div> */}
+              {/* <div className="div-28">
                 <div className="div-29">Men’s Fashion</div>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/419e3d65c94f39310352312d26156e850a5fd9835e5ec39a019f5290ed34bf71?"
                   className="img-5"
                 />
-              </div>
-              <div className="div-30">Electronics</div>
+              </div> */}
+              {/* <div className="div-30">Electronics</div>
               <div className="div-31">Home & Lifestyle</div>
               <div className="div-32">Medicine</div>
               <div className="div-33">Sports & Outdoor</div>
               <div className="div-34">Baby’s & Toys</div>
               <div className="div-35">Groceries & Pets</div>
-              <div className="div-36">Health & Beauty</div>
-            </div>
-            <div className="div-37" />
+              <div className="div-36">Health & Beauty</div> */}
+            {/* </div> */}
+            {/* <div className="div-37" /> */}
             <div className="div-38">
               <div className="div-39">
                 <div className="column">
@@ -76,7 +126,7 @@ const ECommerceHomePage=(props) =>{
                     <div className="div-41">
                       <img
                         loading="lazy"
-                        srcSet="..."
+                        srcSet="https://shorturl.at/pwWZ1"
                         className="img-6"
                       />
                       <div className="div-42">iPhone 14 Series</div>
@@ -98,7 +148,7 @@ const ECommerceHomePage=(props) =>{
                 <div className="column-2">
                   <img
                     loading="lazy"
-                    srcSet="..."
+                    srcSet="https://shorturl.at/fvJZ0"
                     className="img-8"
                   />
                 </div>
@@ -128,20 +178,27 @@ const ECommerceHomePage=(props) =>{
               />
             </div>
           </div>
-          {/* <div className="div-150">   
+
+          <div className="div-150" >   
+
             {catData.map((e,i)=>(
-               <div className="div-151">
+               <div className="div-151" onClick={()=>{handlecategory(e.id)}}  >
+
                <img
                  loading="lazy"
                  src={e.ca_img}
                  className="img-38"
                />
-               <div className="div-152">{e.ca_name}</div>
+               <div className="div-152"> <h1>{e.ca_name}</h1></div>
              </div>
         
             
             ))}
-          </div> */}
+
+
+            
+          </div>
+          <div className="div-278" onClick={()=>{handleAll()}}   >View All Products</div>
           <div className="div-163" />
           <div className="div-199">
             <div className="div-200">
@@ -163,7 +220,7 @@ const ECommerceHomePage=(props) =>{
                 <div className="div-96">
                   <img
                     loading="lazy"
-                    src={el.image}
+                    src={taktak(el.image)[0]}
                     className="img-17"
                   />
                 </div>
@@ -175,7 +232,7 @@ const ECommerceHomePage=(props) =>{
                     className="img-18"
                     />
                   </div>
-                    <div >
+                    <div onClick={()=>{handleDetails(el.id)}}>
                       
                     <img
                         loading="lazy"
@@ -202,7 +259,7 @@ const ECommerceHomePage=(props) =>{
             </div> */}
           </div>
           
-          <div className="div-278">View All Products</div>
+          
           <div className="div-279">
             <div className="div-280" />
             <div className="div-281">Featured</div>
@@ -211,11 +268,11 @@ const ECommerceHomePage=(props) =>{
           <div className="div-283">
             <div className="div-284">
               <div className="column-17">
-                <div className="div-285">
+                {/* <div className="div-285"> */}
                   <div className="div-286">
                     <img
                       loading="lazy"
-                      srcSet="..."
+                      srcSet="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/black_ps5.png"
                       className="img-81"
                     />
                     <div className="div-287">PlayStation 5</div>
@@ -224,7 +281,7 @@ const ECommerceHomePage=(props) =>{
                     </div>
                     <div className="div-289">Shop Now</div>
                   </div>
-                </div>
+                {/* </div> */}
               </div>
               <div className="column-18">
                 <div className="div-290">
@@ -232,7 +289,7 @@ const ECommerceHomePage=(props) =>{
                     <div className="div-292">
                       <img
                         loading="lazy"
-                        srcSet="..."
+                        srcSet="https://shorturl.at/BDGHW"
                         className="img-82"
                       />
                       <div className="div-293">Women’s Collections</div>
@@ -247,14 +304,14 @@ const ECommerceHomePage=(props) =>{
                       <div className="column-19">
                         <img
                           loading="lazy"
-                          srcSet="..."
+                          srcSet="https://shorturl.at/vDNQ9"
                           className="img-83"
                         />
                       </div>
                       <div className="column-20">
                         <img
                           loading="lazy"
-                          srcSet="..."
+                          srcSet="https://img.freepik.com/premium-photo/luxury-perfume-black-background_160204-2526.jpg"
                           className="img-84"
                         />
                       </div>
