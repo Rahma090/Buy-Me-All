@@ -3,7 +3,7 @@
   display: flex;
   padding-bottom: 36px;
   flex-direction: column;
-  width: 1398px;
+  width: 100%;
 }
 .divUp {
   background-color: #000;
@@ -186,7 +186,7 @@
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  padding: 16px 60px;
+  padding: 16px 0px;
 }
 @media (max-width: 991px) {
   .divUp34 {
