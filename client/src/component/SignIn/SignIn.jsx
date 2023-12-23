@@ -39,6 +39,7 @@ import axios from "axios";
             :response.data.user_role="seller"
             ?navigate(`/seller/${response.data.id}`)
             : navigate(`/`);
+
           } else {
             setErrorMessage('Login failed. Please check your credentials.');
          
