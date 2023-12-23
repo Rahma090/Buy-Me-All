@@ -19,7 +19,7 @@ import Menu from '@mui/material/Menu';
 import { useNavigate } from 'react-router-dom';
 
 const tabPages = ['Home', 'Contact', 'About', 'Sign up'];
-const settings = ['Manage My Account', 'My Order', 'My review', 'Logout'];
+const settings = ['Manage My Account', 'My Order', 'Logout'];
 
 
 const Search = styled("div")(({ theme }) => ({
@@ -88,6 +88,7 @@ function Header({value}) {
   };
 
   const handleCloseUserMenu = () => {
+    console.log("hello")
     setAnchorElUser(null);
   };
 
@@ -98,6 +99,10 @@ function Header({value}) {
     setSelectedTab(newValue);
   };
 
+  const handleItem=(i)=>{
+    if(i===0) navigate("/Profile")
+    else if (i===2) navigate("/SignIn")
+  }
 
   return (
     <AppBar position="static" sx={{ backgroundColor: '#fff', color: '#000' }}>
@@ -163,10 +168,9 @@ function Header({value}) {
                 </Box>
                 <Avatar
   alt="Remy Sharp"
-  src="/static/images/avatar/2.jpg"
+  src="https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg?w=2000"
   sx={{
-    width: 32,
-    height: 32,
+    width: 50,
     cursor: 'pointer',
     bgcolor: 'rgba(219, 212, 215, 0.91)',
     color: 'white',
@@ -192,8 +196,8 @@ function Header({value}) {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+              {settings.map((setting,i) => (
+                <MenuItem key={setting} onClick={()=>handleItem(i)}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
