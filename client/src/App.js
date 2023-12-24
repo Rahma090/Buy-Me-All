@@ -8,7 +8,7 @@ import ProductDetails from './component/ProductDetails/ProductDetails.jsx';
 import Admin from './component/Admin/Admin.jsx';
 import Seller from './component/Seller/Seller.jsx';
 import Profile from './component/Profile/profile.jsx';
-
+import Whishlist from './component/Wishlist/Wishlist.jsx'
 function App() {
   return (
 
@@ -21,7 +21,7 @@ function App() {
       <Route path='/Seller' element={ <Seller/>}></Route>
       <Route path='/Profile' element={ <Profile/>}></Route>
       <Route path='/Product/:id' element={<ProductDetails/>} ></Route>
-
+      <Route path='/WishList' element={ <Whishlist/>}></Route>
 
  </Routes>
  </BrowserRouter>

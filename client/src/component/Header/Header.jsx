@@ -104,6 +104,10 @@ function Header({value}) {
     else if (i===2) navigate("/SignIn")
   }
 
+  const handleFav=()=>{
+     navigate("/wishlist")
+  }
+
   return (
     <AppBar position="static" sx={{ backgroundColor: '#fff', color: '#000' }}>
       <Container maxWidth="xl">
@@ -150,9 +154,11 @@ function Header({value}) {
                   <StyledIconButton
                     size="large"
                     aria-label="Wish List"
+                    onClick={()=>{handleFav()}}
                   >
-                    <Badge color="error">
-                      <FavoriteIcon />
+                    <Badge color="error"
+>
+                      <FavoriteIcon   />
                     </Badge>
                   </StyledIconButton>
                   <StyledIconButton
