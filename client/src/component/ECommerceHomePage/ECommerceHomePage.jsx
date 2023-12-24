@@ -9,7 +9,7 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 
 
-const ECommerceHomePage=(props) =>{
+const ECommerceHomePage=({user}) =>{
   const [refrPo,setRefrPo]=useState(false)
   const [postData,setPostData]=useState([])
   const [catData,setCatData]=useState([])
@@ -87,40 +87,29 @@ const  handlecategory= (ids) => {
       });
   }
 
+  const AddToCart=(obj)=>{
+    let storage=JSON.parse(localStorage.getItem("basket"))
+    let arrBasket=[]
+    if(storage!==null){
+        arrBasket=[...storage,obj]
+      }
+    else{
+      arrBasket=[obj]
+    }
+        localStorage.clear()
+        localStorage.setItem("basket",JSON.stringify(arrBasket))
+        window.location.reload()
+
+  }
+  
+
   return (
     <>
       <div className="div">
        <TopHeader/>
-        <Header value={0}/>
-        {/* <div className="div-22" /> */}
+        <Header value={0} user={user}/>
         <div className="div-23">
           <div className="div-24">
-            {/* <div className="div-25"> */}
-              {/* <div className="div-26">
-                <div className="div-27">Woman’s Fashion</div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/419e3d65c94f39310352312d26156e850a5fd9835e5ec39a019f5290ed34bf71?"
-                  className="img-4"
-                />
-              </div> */}
-              {/* <div className="div-28">
-                <div className="div-29">Men’s Fashion</div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/419e3d65c94f39310352312d26156e850a5fd9835e5ec39a019f5290ed34bf71?"
-                  className="img-5"
-                />
-              </div> */}
-              {/* <div className="div-30">Electronics</div>
-              <div className="div-31">Home & Lifestyle</div>
-              <div className="div-32">Medicine</div>
-              <div className="div-33">Sports & Outdoor</div>
-              <div className="div-34">Baby’s & Toys</div>
-              <div className="div-35">Groceries & Pets</div>
-              <div className="div-36">Health & Beauty</div> */}
-            {/* </div> */}
-            {/* <div className="div-37" /> */}
             <div className="div-38">
               <div className="div-39">
                 <div className="column">
@@ -214,8 +203,11 @@ const  handlecategory= (ids) => {
           <div className='seller-products'>
             {postData.map((el,i)=>(
           <div key={i} className="one-product">
+            <div>
               <div className="div-95">
+             
                 <div className="div-96">
+                
                   <img
                     loading="lazy"
                     src={taktak(el.image)[0]}
@@ -239,7 +231,23 @@ const  handlecategory= (ids) => {
                     />
                     </div>
                 </div>
+                
+                
+                  </div>  
+                  <div className="addtoCart" onClick={()=>{AddToCart(el)}} >
+                    <div className="divWishlist34">
+                      <img
+                        loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e462325802d0556992aa0397efea5256f6fd0a6001162dca8b6d920936baee1?"
+                        className="imgWishlist7"
+                      />
+                      <div className="divWishlist35">Add To Cart</div>
+                    </div> 
+                  </div>
               </div>
+              
+                
+              
               <div className="div-99">{el.product_name}</div>
               <div className="div-100">
                 <div className="div-101">{el.price}$</div>

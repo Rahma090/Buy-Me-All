@@ -22,7 +22,7 @@ const AddToFav = async(req,res) => {
 
 const RemoveFav = async(req,res) => {
     try {
-    const result=await Favorite.destroy({where:req.params})
+    const result=await Favorite.destroy({where:req.body})
     res.json(result)   
     } catch (error) {
     res.send(error)    
