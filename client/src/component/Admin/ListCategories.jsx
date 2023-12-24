@@ -4,6 +4,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import UpdateCategory from './UpdateCategory';
+import AddCategory from './AddCategory';
 
 const ListCategories = () => {
   const [data, setData] = useState([]);
@@ -36,11 +37,12 @@ const ListCategories = () => {
   };
 
   return (
+    <div>
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
-            <TableCell />
+            <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }} />
             <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>Category picture</TableCell>
             <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>Category ID</TableCell>
             <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>Category Name</TableCell>
@@ -52,13 +54,14 @@ const ListCategories = () => {
           {data.map((row) => (
             <React.Fragment key={row.id}>
               <TableRow>
-                <TableCell>
+                <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>
                   <IconButton
                     aria-label="expand row"
                     size="small"
                     onClick={() => handleRowToggle(row.id)}
                   >
-                    {openRows[row.id] ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                    {openRows[row.id] ? <KeyboardArrowUpIcon style={{  color: '#ffffff' }}/> 
+                    : <KeyboardArrowDownIcon style={{  color: '#ffffff' }} />}
                   </IconButton>
                 </TableCell>
                 <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>
@@ -73,15 +76,15 @@ const ListCategories = () => {
                 <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>{row.ca_name}</TableCell>
                 <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>{row.createdAt}</TableCell>
                 <TableCell style={{ backgroundColor: '#1a1a1c', color: '#ffffff' }}>
-                  <button onClick={() => handleDelete(row.id)}>Delete</button>
+                  <button  className="button1" onClick={() => handleDelete(row.id)}>Delete</button>
                 </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+                <TableCell style={{ paddingBottom: 0, paddingTop: 0,backgroundColor: '#1a1a1c', color: '#ffffff' }} colSpan={6}>
                   <Collapse in={openRows[row.id]} timeout="auto" unmountOnExit>
                     <Box sx={{ margin: 1 }}>
                       <Typography variant="h6" gutterBottom component="div">
-                        <UpdateCategory id={row.id} />
+                        <UpdateCategory id={row.id} refrechers={refrechers} setRefrechers={setRefrechers} setOpenRows={setOpenRows} />
                       </Typography>
                       {/* Add additional information here */}
                     </Box>
@@ -92,7 +95,14 @@ const ListCategories = () => {
           ))}
         </TableBody>
       </Table>
+     
     </TableContainer>
+    <div className='adddiv'>
+    <AddCategory refrechers={refrechers} setRefrechers={setRefrechers}/>
+    </div>
+
+    </div>
+
   );
 };
 
