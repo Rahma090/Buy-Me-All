@@ -7,12 +7,13 @@ import Footer from "../Footer/Footer";
 import axios from 'axios';
 import { setRef } from "@mui/material";
 
-const Wishlist = (props) => {
+const Wishlist = ({user}) => {
   const [refrPo, setRefrPo] = useState(false);
   const [postData, setPostData] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/BuyMeAll/favorite/${2}`)
+    const ids=user===null?0:user.id
+    axios.get(`http://localhost:3000/api/BuyMeAll/favorite/${ids}`)
       .then((response) => {
         const responseData = response.data[0].products;
         setPostData(responseData);
@@ -62,7 +63,7 @@ const Wishlist = (props) => {
                         />
                       </div>
                       <img onClick={() => handleDelete({
-                        userId:2,
+                        userId:user.id,
                         productId:e.id
                     })}
                         loading="lazy"

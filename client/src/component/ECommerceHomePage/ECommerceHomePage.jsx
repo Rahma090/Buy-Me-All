@@ -108,7 +108,6 @@ const  handlecategory= (ids) => {
     }
         localStorage.clear()
         localStorage.setItem("basket",JSON.stringify(arrBasket))
-        window.location.reload()
 
   }
   
