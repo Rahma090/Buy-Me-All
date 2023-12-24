@@ -1,18 +1,18 @@
 import  React,{useState,useEffect} from "react";
 import './ECommerceHomePage.css'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import TopHeader from "../Top Header/TopHeader.jsx"
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 
-// http://localhost:3000/api/BuyMeAll/category
 const ECommerceHomePage=(props) =>{
   const [refrPo,setRefrPo]=useState(false)
   const [postData,setPostData]=useState([])
   const [catData,setCatData]=useState([])
-
   const navigate=useNavigate()
 
   const taktak=(str)=>{
@@ -62,7 +62,9 @@ const ECommerceHomePage=(props) =>{
   }, [refrPo]);
 
   const handleDetails=(ids)=>{
-   navigate(`/Product/${ids}`) 
+    navigate(`/Product/${ids}`) 
+   }
+
 const  handlecategory= (ids) => {
     axios.get(`http://localhost:3000/api/BuyMeAll/category/${ids}`)
       .then((response) => {
@@ -244,11 +246,9 @@ const  handlecategory= (ids) => {
                 {/*      */}
               </div>
               <div className="div-103">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/f79bd71a6471f38d5d1fc5e45c151fa99346fc4a5342fd2b25d87f1e68ade395"
-                  className="img-20"
-                />
+              {parseFloat(el.rate)&&<Stack spacing={1}>
+                       <Rating name="half-rating" defaultValue={parseFloat(el.rate)} precision={0.5} readOnly />
+                            </Stack>}
                 <div className="div-104">({el.quantity})</div>
               </div>
             </div>))}
