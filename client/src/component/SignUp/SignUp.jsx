@@ -1,7 +1,7 @@
 import   React,{useState} from "react";
 import axios from "axios";
 import {Link, useNavigate } from 'react-router-dom';
-// import { useAuth } from '../../AuthorContext/authContext.jsx';
+import { useIdentity } from '../../AuthorContext/IdentityContext.jsx'
 import Cookies from 'js-cookie';
 import "./SignUp.css"
 import TopHeader from "../Top Header/TopHeader.jsx";
@@ -21,9 +21,9 @@ const SignUp=(props) =>{
   const [userEmail, setUserEmail] = useState("")
   const [userpassword, setUserpassword] = useState("")
   const [role,setRole]=useState("client")
-  // const { setToken } = useAuth();
+  
   const navigate = useNavigate();
-
+  const { setUser } = useIdentity();
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -41,7 +41,7 @@ const SignUp=(props) =>{
 
       if (user_phOrEmail && user_name && tok) {
         Cookies.set('authToken', tok, { expires: 7 }); 
-        // setToken(tok);
+        setUser(response.data);
         
         setSuccessMessage('Registration successful');
         setErrorMessage('');

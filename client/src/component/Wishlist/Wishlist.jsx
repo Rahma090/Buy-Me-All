@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import './Wishlist.css';
 import TopHeader from "../Top Header/TopHeader";
@@ -39,6 +40,7 @@ const Wishlist = (props) => {
         <TopHeader />
         <Header />
         
+
         <div className="divWishlist23">
           <div className="divWishlist24">Wishlist (4)</div>
           <div className="divWishlist25">Move All To Bag</div>
@@ -46,6 +48,7 @@ const Wishlist = (props) => {
         <div className="divWishlist26">
           <div className="divWishlist27">
             <div className="columnWishlist">
+
               {postData.map((e, i) => (
                 <div className="divWishlist28" key={i}>
                   <div className="divWishlist29">
@@ -68,10 +71,12 @@ const Wishlist = (props) => {
                         className="imgWishlist6"
                       />
                     </div>
+
                     <div className="divWishlist34">
                       <img
                         loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e462325802d0556992aa0397efea5256f6fd0a6001162dca8b6d920936baee1?"
+
                         alt={e.product_name}
                         className="imgWishlist7"
                       />
@@ -94,3 +99,4 @@ const Wishlist = (props) => {
 }
 
 export default Wishlist;
+

@@ -17,6 +17,8 @@ import Badge from '@mui/material/Badge';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Menu from '@mui/material/Menu';
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import {useIdentity} from '../../AuthorContext/IdentityContext'
 
 const tabPages = ['Home', 'Contact', 'About', 'Sign up'];
 const settings = ['Manage My Account', 'My Order', 'Logout'];
@@ -69,11 +71,12 @@ const StyledInputBase = styled("input")(({ theme }) => ({
   width: "200px",
 }));
 
-function Header({value}) {
+function Header({value,user}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [selectedTab, setSelectedTab] = React.useState(value);
   const navigate=useNavigate()
+  const {clearUser}=useIdentity()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -88,7 +91,6 @@ function Header({value}) {
   };
 
   const handleCloseUserMenu = () => {
-    console.log("hello")
     setAnchorElUser(null);
   };
 
@@ -97,16 +99,31 @@ function Header({value}) {
     if(newValue===0) navigate('/')
     else if(newValue===3) navigate('/SignIn')
     setSelectedTab(newValue);
-  };
+  }
+  const profileVerif=()=>{
+    user===null?navigate("/SignIn"):navigate("/Profile")
+  }
+
+  const logOut=()=>{
+    Cookies.remove("token")
+    clearUser()
+    navigate('/')
+
+  }
+  const handleWish=()=>{
+    user===null?navigate("/SignIn"):navigate("/WishList")
+  }
 
   const handleItem=(i)=>{
-    if(i===0) navigate("/Profile")
-    else if (i===2) navigate("/SignIn")
+    if(i===0) profileVerif()
+    else if (i===2) logOut()
   }
+ const counterItem=()=>{
+  return (JSON.parse(localStorage.getItem("basket"))!==null)?JSON.parse(localStorage.getItem("basket")).length:0
 
-  const handleFav=()=>{
-     navigate("/wishlist")
-  }
+ }
+
+
 
   return (
     <AppBar position="static" sx={{ backgroundColor: '#fff', color: '#000' }}>
@@ -150,15 +167,16 @@ function Header({value}) {
                   />
                 </Search>
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }} />
-                <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                <Box sx={{ display: { xs: "none", md: "flex" } }} >
                   <StyledIconButton
                     size="large"
                     aria-label="Wish List"
-                    onClick={()=>{handleFav()}}
+
+                    onClick={()=>{handleWish()}}
                   >
-                    <Badge color="error"
->
-                      <FavoriteIcon   />
+                    <Badge  color="error">
+                      <FavoriteIcon />
+
                     </Badge>
                   </StyledIconButton>
                   <StyledIconButton
@@ -166,8 +184,9 @@ function Header({value}) {
                     aria-label="Cart"
                     color="inherit"
                     sx={{ mr: 1 }}
+                    onClick={()=>{navigate('/Cart')}}
                   >
-                    <Badge badgeContent={3} color="error">
+                    <Badge badgeContent={counterItem()} color="error">
                       <ShoppingCartIcon/>
                     </Badge>
                   </StyledIconButton>

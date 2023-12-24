@@ -7,7 +7,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 const Seller = () => {
     const [data,setData]=useState([])
     useEffect(()=>{
-        axios.get('http://localhost:3000/api/BuyMeAll/seller/products/5').then((res)=>{
+        axios.get('http://localhost:3000/api/BuyMeAll/seller/products/2').then((res)=>{
             setData(res.data)
         })
     },[])
@@ -19,9 +19,21 @@ const Seller = () => {
             console.log(err)
         })
     }
+
+    const taktak=(str)=>{
+      var start=0
+      var arr=[]
+      for (var i=0;i<str.length;i++){
+          if(str[i]===','){
+              arr.push(str.slice(start,i))
+              start=i+1
+          }
+      }
+      return arr
+  }
+
     return (
         <div>
-            <Header value={0}/>
             <div>
                 <h1>Sellers Products</h1>
             </div>
@@ -32,7 +44,7 @@ const Seller = () => {
                 <div className="div-96">
                   <img
                     loading="lazy"
-                    src={el.image}
+                    src={taktak(el.image)[0]}
                     className="img-17"
                   />
                 </div>

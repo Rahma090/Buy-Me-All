@@ -2,14 +2,13 @@ const {orders,Users, Product}=require('../database-Sequelize/index')
 
 const AllOrders = async(req,res) => {
     try {
-    const result=await Users.findAll({
-        include: Product
-      });
+    const result=await orders.findAll();
     res.json(result)   
     } catch (error) {
     res.send(error)    
     }
 };
+
 
 const AddOrders = async(req,res) => {
     try {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './ProductDetails.css'
+import '../ProductDetails/ProductDetails.css'
 import TopHeader from "../Top Header/TopHeader.jsx";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
@@ -7,8 +7,9 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
+// import Cloudinary from "../Cloudinary";
 
-const ProductDetails=() =>{
+const ProductUpdate=() =>{
   const [oneProduct,SetOneProduct]=useState([])
   const [oneProdImg,setOneProdImg]=useState([])
   const [idImg,setIdImg]=useState(0)
@@ -38,7 +39,7 @@ console.log(id)
     <>
       <div className="divP">
       <TopHeader/>
-      <Header/>
+      {/* <Cloudinary/> */}
         <div className="divProduct23">
           
           <div className="divProduct28">
@@ -130,10 +131,9 @@ console.log(id)
           
          
         </div>
-     <Footer/>
       </div>
     </>
   );
 }
 
-export default ProductDetails
+export default ProductUpdate
