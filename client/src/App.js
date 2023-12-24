@@ -13,7 +13,6 @@ import ProductUpdate from './component/Seller/ProductUpdate.jsx'
 function App() {
   return (
 
-    <BrowserRouter>
     <Routes>
       <Route path='/' element={ <ECommerceHomePage/>}></Route>  
       <Route path='/SignIn' element={ <SignIn/>}></Route>
@@ -26,7 +25,7 @@ function App() {
 
 
  </Routes>
- </BrowserRouter>
+
 
   );
 }
