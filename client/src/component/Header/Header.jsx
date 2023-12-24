@@ -124,6 +124,7 @@ function Header({value,user}) {
  }
 
 
+
   return (
     <AppBar position="static" sx={{ backgroundColor: '#fff', color: '#000' }}>
       <Container maxWidth="xl">
@@ -170,10 +171,12 @@ function Header({value,user}) {
                   <StyledIconButton
                     size="large"
                     aria-label="Wish List"
+
                     onClick={()=>{handleWish()}}
                   >
                     <Badge  color="error">
                       <FavoriteIcon />
+
                     </Badge>
                   </StyledIconButton>
                   <StyledIconButton

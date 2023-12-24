@@ -4,7 +4,7 @@ const {UsersFav,AddToFav,RemoveFav} = require('../controllers/favorite.controlle
 
 favoriteRoute.get('/favorite/:id',UsersFav)
 favoriteRoute.post('/favorite',AddToFav)
-favoriteRoute.delete('/favorite/:id',RemoveFav)
+favoriteRoute.delete('/favorite',RemoveFav)
 
 
 module.exports=favoriteRoute
