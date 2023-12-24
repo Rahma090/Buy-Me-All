@@ -16,7 +16,6 @@ import {useIdentity} from './AuthorContext/IdentityContext.jsx'
 function App() {
    
   const {user}=useIdentity()
-console.log(user)
   const taktak=(str)=>{
     var start=0
     var arr=[]
