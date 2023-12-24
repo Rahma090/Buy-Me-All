@@ -57,6 +57,16 @@ const  handlecategory= (ids) => {
         console.error("Error fetching data:", error);
       });
   }
+  const addfav = (obj) => {
+    axios.post(`http://localhost:3000/api/BuyMeAll/favorite`,obj)
+      .then((response) => {
+        const responseData = response.data.products;
+        
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  };
 
   const  handleAll= () => {
     axios.get(`http://localhost:3000/api/BuyMeAll/products`)
@@ -206,7 +216,12 @@ const  handlecategory= (ids) => {
                 </div>
                 <div className="div-98">
                     <div >
-                    <img 
+
+                    <img onClick={()=>{addfav(
+                      {  userId:2,
+                        productId:el.id
+                      }
+                    )}}
                     loading="lazy" 
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/00d93adab53c5214ab1a164999c542db25c2e68622e0085e7c9140fbeae9a9e5" 
                     className="img-18"

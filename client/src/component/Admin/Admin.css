@@ -2,7 +2,7 @@
     border-radius: 12px;
     background-color: #1a1a1c;
     padding-right: 50px;
-    height: 945px;
+    height: 2000px;
   }
   @media (max-width: 991px) {
     .div {
@@ -33,11 +33,13 @@
     }
   }
   .divAdmin3 {
+  
     display: flex;
-    flex-grow: 1;
+    flex-grow: 0;
     flex-direction: column;
     justify-content: center;
-  }
+}
+  
   .divAdmin4 {
     backdrop-filter: blur(10px);
     background-color: rgba(37, 35, 46, 0.2);
@@ -66,7 +68,7 @@
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 24px;
+    width: 45px;
     overflow: hidden;
     max-width: 100%;
   }
@@ -121,10 +123,11 @@
     }
   }
   .divAdmin12 {
-    color: #aaabb0;
+    background-color: #fbfcff;
     align-self: center;
     margin: auto 0;
     font: 500 14px Inter, sans-serif;
+    width: 378px;
   }
   .divAdmin13 {
     align-self: start;
@@ -154,6 +157,10 @@
     gap: 20px;
     padding: 12px 22px;
   }
+ 
+    .divAdmin15:hover {
+      cursor: pointer;
+  }
   @media (max-width: 991px) {
     .divAdmin15 {
       padding: 0 20px;
@@ -172,6 +179,9 @@
     justify-content: space-between;
     gap: 20px;
   }
+  .divAdmin17:hover {
+    cursor: pointer;
+}
   .divAdmin18 {
     color: var(--txt-desactive, #aaabb0);
     margin-top: 7px;
@@ -208,14 +218,14 @@
     }
   }
   .imgAdmin2 {
-    aspect-ratio: 1;
+ 
     object-fit: contain;
     object-position: center;
-    width: 24px;
+    width: 47px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    max-width: 100%;
+  
   }
   .divAdmin22 {
     color: var(--txt-desactive, #aaabb0);
@@ -307,6 +317,18 @@
   }
   @media (max-width: 991px) {
     .colAdmin2 {
+      width: 100%;
+    }
+  }
+  .colAdmin222 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 100%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .colAdmin222 {
       width: 100%;
     }
   }
@@ -645,9 +667,23 @@
     line-height: normal;
     width: 49%;
     margin-left: 20px;
+    
   }
   @media (max-width: 991px) {
     .columnAdmin3 {
+      width: 100%;
+    }
+  }
+  .columnAdmin333 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 1454px;
+    margin-left: 20px;
+    margin-top: 47px;
+  }
+  @media (max-width: 991px) {
+    .columnAdmin333 {
       width: 100%;
     }
   }
@@ -848,4 +884,26 @@
     .divAdmin70 {
       white-space: initial;
     }
+  }
+
+  .nav-search {
+    background-color: rgb(199, 194, 207);
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #53a8b6;
+    width: 400px;
+    margin-left: 26px;
+    gap: 50px;
+    height: 52px;
+    border-radius: 32px;
+    padding-left: 22px;
+}
+  .nav-search input {
+    background-color: transparent;
+    border:0;
+    outline:none;
+    width: 300px;
+    font-size: 24px;
+
+    
   }
