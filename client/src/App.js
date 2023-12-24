@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './AuthorContext/authContext.jsx';
+import { AuthProvider } from './AuthorContext/IdentityContext.jsx';
 import ECommerceHomePage from './component/ECommerceHomePage/ECommerceHomePage.jsx';
 import SignIn from './component/SignIn/SignIn.jsx';
 import SignUp from './component/SignUp/SignUp.jsx';
@@ -13,7 +13,6 @@ import ProductUpdate from './component/Seller/ProductUpdate.jsx'
 function App() {
   return (
 
-    <BrowserRouter>
     <Routes>
       <Route path='/' element={ <ECommerceHomePage/>}></Route>  
       <Route path='/SignIn' element={ <SignIn/>}></Route>
@@ -26,7 +25,7 @@ function App() {
 
 
  </Routes>
- </BrowserRouter>
+
 
   );
 }

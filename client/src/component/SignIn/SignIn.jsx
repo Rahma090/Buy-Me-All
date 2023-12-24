@@ -1,7 +1,7 @@
 import   React,{useState} from "react";
 import axios from "axios";
-    import './SignIn.css'
-    // import { useAuth } from '../../AuthorContext/authContext.jsx';
+import './SignIn.css'
+import { useIdentity } from '../../AuthorContext/IdentityContext.jsx'
     import { Link, useNavigate } from 'react-router-dom';
     import Cookies from 'js-cookie';
     import TopHeader from "../Top Header/TopHeader.jsx";
@@ -15,7 +15,7 @@ import axios from "axios";
       const [userEmail, setUserEmail] = useState("")
       const [successMessage, setSuccessMessage] = useState('');
       const [errorMessage, setErrorMessage] = useState('');
-      // const { setToken } = useAuth();
+      const { setUser } = useIdentity();
       const navigate = useNavigate();
       const handleSubmit = async (event) => {
           try {
@@ -31,12 +31,11 @@ import axios from "axios";
             const { tok } = response.data;
             console.log(tok)
             Cookies.set('authToken', tok, { expires: 60*60*24 })
-            // setToken(tok);
+            setUser(response.data);
             setErrorMessage('');
-           
             setSuccessMessage('signup successful')
-            response.data.user_role="admin"?navigate(`/admin/${response.data.id}`)
-            :response.data.user_role="seller"
+            response.data.user_role==="admin"?navigate(`/admin/${response.data.id}`)
+            :response.data.user_role==="seller"
             ?navigate(`/seller/${response.data.id}`)
             : navigate(`/`);
 
