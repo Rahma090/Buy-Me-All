@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ListCategories from "./ListCategories";
+import Orders from "./Orders"
 
 const Admin=(props)=> {
   const [data, setData] = useState([]);
@@ -61,6 +62,7 @@ const Admin=(props)=> {
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/8ba1ba319e439fc67eb537da94e50530ff26a32623bd3fcc32d4412e3d8dbaba?"
                       className="imgAdmin"
                     />
+                    
                     <div className="divAdmin7">Admin</div>
                   </div>
                 
@@ -159,9 +161,10 @@ const Admin=(props)=> {
           
         { two==="1" ? <div className="columnAdmin3"><ClientDetails one={one}/></div>
         :two==="2"?<div className="columnAdmin333"><ListCategories/></div>
-        :<></>}
+        :<div className="columnAdmin333"><Orders/></div>}
           </div>
         </div>
+        
       
 
     </>

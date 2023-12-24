@@ -275,7 +275,7 @@
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 48px;
+    width: 80px;
     overflow: hidden;
     max-width: 100%;
   }
@@ -674,6 +674,20 @@
       width: 100%;
     }
   }
+  .adddiv {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 56%;
+    margin-left: 218px;
+    margin-top: 100px;
+    
+  }
+  @media (max-width: 991px) {
+    .adddiv {
+      width: 100%;
+    }
+  }
   .columnAdmin333 {
     display: flex;
     flex-direction: column;
@@ -714,7 +728,7 @@
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 52px;
+    width:200px;
     overflow: hidden;
     margin-top: 12px;
     max-width: 100%;
