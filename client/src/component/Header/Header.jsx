@@ -129,6 +129,7 @@ function Header({value,user}) {
     <AppBar position="static" sx={{ backgroundColor: '#fff', color: '#000' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+        <img src="https://i.ibb.co/x1V54DN/goldLogo.png" alt="Logo" style={{ width: '50px', height: 'auto', marginRight: '10px' }} />
           <Typography
             variant="h6"
             noWrap

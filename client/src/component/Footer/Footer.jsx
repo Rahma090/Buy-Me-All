@@ -32,7 +32,7 @@ const Footer = () => {
       <Container >
         <Grid container spacing={2} justifyContent="space-between">
           <Grid item xs={12} sm={6} md={3}>
-            <img src="https://i.ibb.co/xj2X5v1/completed-Logo.png" alt="Logo" style={{ width: '250px', height: 'auto', marginRight: '280px' }} />
+            <img src="https://i.ibb.co/MVCHPns/moving-Logo-2.gif" alt="Logo" style={{ width: '250px', height: 'auto', marginRight: '280px' }} />
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography variant="subtitle1">
