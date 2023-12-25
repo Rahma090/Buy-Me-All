@@ -67,7 +67,7 @@ const Cart=({taktak,user})=> {
             </div>
             <div className="divCart36">{el.product_name}</div>
             <div>1</div>
-            <div className="divCart37">$650</div>
+            <div className="divCart37">{el.price}</div>
           </div>)):<h1>Empty Busket</h1>}
           
           <div className="divCart43">

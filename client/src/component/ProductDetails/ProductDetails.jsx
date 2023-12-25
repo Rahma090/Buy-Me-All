@@ -8,13 +8,24 @@ import { useParams } from "react-router-dom";
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 
-const ProductDetails=() =>{
+const ProductDetails=({user}) =>{
   const [oneProduct,SetOneProduct]=useState([])
   const [oneProdImg,setOneProdImg]=useState([])
   const [idImg,setIdImg]=useState(0)
 
   const {id}=useParams()
 
+
+  const addfav = (obj) => {
+    axios.post(`http://localhost:3000/api/BuyMeAll/favorite`,obj)
+      .then((response) => {
+        const responseData = response.data.products;
+        
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  };
  const taktak=(str)=>{
     var start=0
     var arr=[]
@@ -84,11 +95,16 @@ console.log(id)
                   
                   <div className="divProduct57">
                     
-                    <div className="divProduct60"><div className="buyBtn">Buy Now</div></div>
+                    <div className="divProduct60" ><div className="buyBtn">Buy Now</div></div>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec08a593d461e728db2a3e431df9e075d5f9912126c045dc62171b9ec6894644?"
                       className="imgProduct14"
+                      onClick={()=>{addfav(
+                        {  userId:user.id,
+                          productId:oneProduct.id
+                        }
+                      )}}
                     />
                   </div>
                   <div className="divProduct61">
