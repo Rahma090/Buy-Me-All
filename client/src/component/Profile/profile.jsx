@@ -65,7 +65,7 @@ const Profile = () => {
         </Typography>
       </div>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',gap:'90px' }}>
-        <div className="profilephotoEdit" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px'  }}>
+        <div className="profilephotoEdit" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '250px'  }}>
           <input
             accept="image/*"
             type="file"
@@ -153,13 +153,11 @@ const Profile = () => {
                     }}
                   />
                 </Grid>
-                <Grid item xs={6}>
-                  <Button  type="submit" variant="contained" color="success">
+                <Grid item xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '80px' }}>
+                  <Button item xs={12} type="submit" variant="contained" color="success">
                     Save
                   </Button>
-                </Grid>
-                <Grid item xs={6}>
-                  <Button onClick={handleClickCancel} variant="outlined" color="error" >
+                  <Button item xs={12} onClick={handleClickCancel} variant="outlined" color="error" >
                     Cancel
                   </Button>
                 </Grid>
