@@ -108,7 +108,6 @@ const  handlecategory= (ids) => {
     }
         localStorage.clear()
         localStorage.setItem("basket",JSON.stringify(arrBasket))
-        window.location.reload()
 
   }
   
@@ -228,7 +227,7 @@ const  handlecategory= (ids) => {
                     <div >
 
                     <img onClick={()=>{addfav(
-                      {  userId:2,
+                      {  userId:user.id,
                         productId:el.id
                       }
                     )}}

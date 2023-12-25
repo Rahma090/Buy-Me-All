@@ -45,8 +45,10 @@ const SignUp=(props) =>{
         
         setSuccessMessage('Registration successful');
         setErrorMessage('');
-
-        navigate(`/`);
+        response.data.user_role==="admin"?navigate(`/admin/${response.data.id}`)
+        :response.data.user_role==="seller"
+        ?navigate(`/seller/${response.data.id}`)
+        : navigate(`/`);
       } else {
         setSuccessMessage('');
         setErrorMessage('!Registration failed. Please try again.');

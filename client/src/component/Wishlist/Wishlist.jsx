@@ -7,12 +7,13 @@ import Footer from "../Footer/Footer";
 import axios from 'axios';
 import { setRef } from "@mui/material";
 
-const Wishlist = (props) => {
+const Wishlist = ({user}) => {
   const [refrPo, setRefrPo] = useState(false);
   const [postData, setPostData] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/BuyMeAll/favorite/${2}`)
+    const ids=user===null?0:user.id
+    axios.get(`http://localhost:3000/api/BuyMeAll/favorite/${ids}`)
       .then((response) => {
         const responseData = response.data[0].products;
         setPostData(responseData);
@@ -62,7 +63,7 @@ const Wishlist = (props) => {
                         />
                       </div>
                       <img onClick={() => handleDelete({
-                        userId:2,
+                        userId:user.id,
                         productId:e.id
                     })}
                         loading="lazy"
@@ -72,19 +73,11 @@ const Wishlist = (props) => {
                       />
                     </div>
 
-                    <div className="divWishlist34">
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e462325802d0556992aa0397efea5256f6fd0a6001162dca8b6d920936baee1?"
-
-                        alt={e.product_name}
-                        className="imgWishlist7"
-                      />
-                    </div>
+                    
                   </div>
                   <div className="divWishlist36">{e.product_name}</div>
                   <div className="divWishlist37">
-                    <div className="divWishlist38">{e.price}</div>
+                    <div className="divWishlist38">{e.price}$</div>
                     
                   </div>
                 </div>
