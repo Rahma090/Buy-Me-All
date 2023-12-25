@@ -26,15 +26,13 @@ const Footer = () => {
         py: 3,
         borderTop: '1px solid',
         borderColor: 'divider',
+        padding: '142px'
       }}
     >
-      <Container maxWidth={false}>
+      <Container >
         <Grid container spacing={2} justifyContent="space-between">
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" color="white" gutterBottom>
-              Buy Me All
-            </Typography>
-            {/* Add your logo image here */}
+            <img src="https://i.ibb.co/xj2X5v1/completed-Logo.png" alt="Logo" style={{ width: '250px', height: 'auto', marginRight: '280px' }} />
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography variant="subtitle1">
@@ -85,7 +83,7 @@ const Footer = () => {
             <Typography variant="h6" color="white" align="center">
               QR Code
             </Typography>
-            {/* Add your QR code image here */}
+            <img src="https://i.ibb.co/KshTGmV/QR-code.png" alt="Logo" style={{ width: '100px', height: 'auto', marginLeft: '90px' }} />
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography variant="subtitle1" color="white" gutterBottom>
