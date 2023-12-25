@@ -1,7 +1,7 @@
 import   React,{useState} from "react";
 import axios from "axios";
 import {Link, useNavigate } from 'react-router-dom';
-// import { useAuth } from '../../AuthorContext/authContext.jsx';
+import { useIdentity } from '../../AuthorContext/IdentityContext.jsx'
 import Cookies from 'js-cookie';
 import "./SignUp.css"
 import TopHeader from "../Top Header/TopHeader.jsx";
@@ -21,9 +21,9 @@ const SignUp=(props) =>{
   const [userEmail, setUserEmail] = useState("")
   const [userpassword, setUserpassword] = useState("")
   const [role,setRole]=useState("client")
-  // const { setToken } = useAuth();
+  
   const navigate = useNavigate();
-
+  const { setUser } = useIdentity();
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -41,12 +41,14 @@ const SignUp=(props) =>{
 
       if (user_phOrEmail && user_name && tok) {
         Cookies.set('authToken', tok, { expires: 7 }); 
-        // setToken(tok);
+        setUser(response.data);
         
         setSuccessMessage('Registration successful');
         setErrorMessage('');
-
-        navigate(`/ECommerceHomePage`);
+        response.data.user_role==="admin"?navigate(`/admin/${response.data.id}`)
+        :response.data.user_role==="seller"
+        ?navigate(`/seller/${response.data.id}`)
+        : navigate(`/`);
       } else {
         setSuccessMessage('');
         setErrorMessage('!Registration failed. Please try again.');
@@ -65,14 +67,13 @@ const SignUp=(props) =>{
       <TopHeader/>
       <Header value={3}/>
 
-        <div className="divUp" />
         <div className="divUp21">
           <div className="divUp22">
             <div className="col">
               <div className="divUp23">
                 <img
                   loading="lazy"
-                  srcSet="..."
+                  srcSet="https://i.ibb.co/XS8RQzm/intro.gif"
                   className="imgUp2"
                 />
               </div>

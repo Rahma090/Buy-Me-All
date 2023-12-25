@@ -17,7 +17,7 @@ const Product =(connection,DataTypes)=>{
         allowNull: false,
       },
     rate: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.FLOAT,
         allowNull: false,
       },
       description : {

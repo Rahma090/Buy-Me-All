@@ -13,9 +13,7 @@ const AllProduct = async(req,res) => {
 
 const GetProduct=async(req,res) => {
     try {
-    const result=await Product.findOne({
-        include:{model:Categories}
-    },{where:{id:req.params.id}});
+    const result=await Product.findOne({where:{id:req.params.id}})
     res.json(result) 
     } catch (error) {
         res.send(error)
@@ -24,7 +22,7 @@ const GetProduct=async(req,res) => {
 
 const GetSellerProd=async(req,res) => {
     try {
-    const result=await Product.findOne({where:{seller_id:req.params.id}},{
+    const result=await Product.findAll({where:{seller_id:req.params.id}},{
         include:{model:Categories}
     });
     res.json(result) 

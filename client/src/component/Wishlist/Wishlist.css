@@ -1,11 +1,9 @@
-.divP {
-    background-color: #fff;
+.divWishlist{
+    background-color: var(--BG, #fff);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
   }
-  .divProduct2 {
+  .divWishlist2 {
     justify-content: center;
     align-items: end;
     background-color: var(--Button, #000);
@@ -16,38 +14,38 @@
     padding: 12px 60px;
   }
   @media (max-width: 991px) {
-    .divProduct2 {
+    .divWishlist2 {
       max-width: 100%;
       padding: 0 20px;
     }
   }
-  .divProduct3 {
+  .divWishlist3 {
     display: flex;
-    margin-right: 73px;
+    margin-right: 76px;
     width: 859px;
     max-width: 100%;
     justify-content: space-between;
     gap: 20px;
   }
   @media (max-width: 991px) {
-    .divProduct3 {
+    .divWishlist3 {
       margin-right: 10px;
       flex-wrap: wrap;
     }
   }
-  .divProduct4 {
+  .divWishlist4 {
     align-items: center;
     display: flex;
     justify-content: space-between;
     gap: 8px;
   }
   @media (max-width: 991px) {
-    .divProduct4 {
+    .divWishlist4 {
       max-width: 100%;
       flex-wrap: wrap;
     }
   }
-  .divProduct5 {
+  .divWishlist5 {
     color: var(--Text, #fafafa);
     flex-grow: 1;
     margin: auto 0;
@@ -55,11 +53,11 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct5 {
+    .divWishlist5 {
       max-width: 100%;
     }
   }
-  .divProduct6 {
+  .divWishlist6 {
     color: var(--Text, #fafafa);
     text-align: center;
     text-decoration-line: underline;
@@ -69,17 +67,17 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct6 {
+    .divWishlist6 {
       white-space: initial;
     }
   }
-  .divProduct7 {
+  .divWishlist7 {
     justify-content: space-between;
     align-items: center;
     display: flex;
     gap: 5px;
   }
-  .divProduct8 {
+  .divWishlist8 {
     color: var(--Text, #fafafa);
     flex-grow: 1;
     white-space: nowrap;
@@ -88,11 +86,11 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct8 {
+    .divWishlist8 {
       white-space: initial;
     }
   }
-  .img {
+  .imgWishlist {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -101,8 +99,9 @@
     align-self: stretch;
     max-width: 100%;
   }
-  .divProduct9 {
+  .divWishlist9 {
     align-items: center;
+    align-self: center;
     display: flex;
     margin-top: 40px;
     width: 100%;
@@ -111,12 +110,12 @@
     gap: 20px;
   }
   @media (max-width: 991px) {
-    .divProduct9 {
+    .divWishlist9 {
       max-width: 100%;
       flex-wrap: wrap;
     }
   }
-  .divProduct10 {
+  .divWishlist10 {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -125,19 +124,19 @@
     padding: 0 20px;
   }
   @media (max-width: 991px) {
-    .divProduct10 {
+    .divWishlist10 {
       max-width: 100%;
       flex-wrap: wrap;
     }
   }
-  .divProduct11 {
+  .divWishlist11 {
     color: var(--Text2, #000);
     letter-spacing: 0.72px;
     margin: auto 0;
     font: 700 24px/100% Inter, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct12 {
+  .divWishlist12 {
     align-items: flex-start;
     align-self: stretch;
     display: flex;
@@ -145,41 +144,41 @@
     gap: 20px;
     padding: 4px 1px;
   }
-  .divProduct13 {
+  .divWishlist13 {
     color: var(--Text2, #000);
     text-align: center;
     align-self: start;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct14 {
+  .divWishlist14 {
     color: var(--Text2, #000);
     text-align: center;
     align-self: start;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct15 {
+  .divWishlist15 {
     color: var(--Text2, #000);
     text-align: center;
     align-self: start;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct16 {
+  .divWishlist16 {
     color: var(--Text2, #000);
     text-align: center;
     align-self: stretch;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct17 {
+  .divWishlist17 {
     align-self: stretch;
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
-  .divProduct18 {
+  .divWishlist18 {
     justify-content: center;
     border-radius: 4px;
     background-color: var(--Secondary, #f5f5f5);
@@ -189,19 +188,19 @@
     flex-direction: column;
     padding: 7px 12px 7px 20px;
   }
-  .divProduct19 {
+  .divWishlist19 {
     justify-content: space-between;
     align-items: center;
     display: flex;
     gap: 20px;
   }
-  .divProduct20 {
+  .divWishlist20 {
     color: var(--Text2, #000);
     margin: auto 0;
     font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct21 {
+  .divWishlist21 {
     justify-content: center;
     align-self: center;
     display: flex;
@@ -209,7 +208,7 @@
     margin: auto 0;
     padding: 0 20px;
   }
-  .imgProduct2 {
+  .imgWishlist2 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -217,7 +216,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .imgProduct3 {
+  .imgWishlist3 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -227,7 +226,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .imgProduct4 {
+  .imgWishlist4 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -235,7 +234,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .divProduct22 {
+  .divWishlist22 {
     background-color: #000;
     align-self: stretch;
     min-height: 1px;
@@ -243,674 +242,576 @@
     width: 100%;
   }
   @media (max-width: 991px) {
-    .divProduct22 {
+    .divWishlist22 {
       max-width: 100%;
     }
   }
-  .divProduct23 {
+  .divWishlist23 {
+    align-items: center;
+    align-self: center;
     display: flex;
     margin-top: 79px;
     width: 100%;
     max-width: 1170px;
-    flex-direction: column;
-    align-items: start;
-    padding: 0 1px;
-  }
-  @media (max-width: 991px) {
-    .divProduct23 {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-  .divProduct24 {
-    display: flex;
     justify-content: space-between;
     gap: 20px;
     padding: 0 20px;
   }
-  .divProduct25 {
-    color: var(--Text2, #000);
-    white-space: nowrap;
-    font: 400 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
   @media (max-width: 991px) {
-    .divProduct25 {
-      white-space: initial;
+    .divWishlist23 {
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-top: 40px;
     }
   }
-  .divProduct26 {
-    color: var(--Text2, #000);
-    font: 400 14px/150% Poppins, -apple-system, Roboto, Helvetica,
+  .divWishlist24 {
+    color: #000;
+    text-align: center;
+    margin: auto 0;
+    font: 400 20px/130% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct27 {
+  .divWishlist25 {
     color: var(--Text2, #000);
-    flex-grow: 1;
     white-space: nowrap;
-    font: 400 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct27 {
-      white-space: initial;
-    }
-  }
-  .divProduct28 {
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     align-self: stretch;
-    margin-top: 80px;
-    padding: 0 20px;
+    padding: 16px 48px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct28 {
+    .divWishlist25 {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  .divWishlist26 {
+    align-self: center;
+    margin-top: 60px;
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 20px;
+
+  }
+  @media (max-width: 991px) {
+    .divWishlist26 {
       max-width: 100%;
       margin-top: 40px;
     }
   }
-  .divProduct29 {
+  .divWishlist27 {
     gap: 20px;
     display: flex;
   }
   @media (max-width: 991px) {
-    .divProduct29 {
+    .divWishlist27 {
       flex-direction: column;
       align-items: stretch;
       gap: 0px;
     }
   }
-  .columnP {
+  .columnWishlist {
     display: flex;
     flex-direction: column;
     line-height: normal;
-    width: 15%;
+    width: 25%;
     margin-left: 0px;
   }
   @media (max-width: 991px) {
-    .columnP {
+    .columnWishlist {
       width: 100%;
     }
   }
-  .divProduct30 {
+  .divWishlist28 {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
   }
   @media (max-width: 991px) {
-    .divProduct30 {
+    .divWishlist28 {
       margin-top: 30px;
     }
   }
-  .divProduct31 {
-    justify-content: center;
-    align-items: center;
+  .divWishlist29 {
     border-radius: 4px;
     background-color: var(--Secondary, #f5f5f5);
     display: flex;
-    flex-direction: column;
-    padding: 12px 25px;
-  }
-  @media (max-width: 991px) {
-    .divProduct31 {
-      padding: 0 20px;
-    }
-  }
-  .imgProduct5 {
-    aspect-ratio: 1.06;
-    object-fit: contain;
-    object-position: center;
-    width: 121px;
-    overflow: hidden;
-  }
-  .divProduct32 {
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    background-color: var(--Secondary, #f5f5f5);
-    display: flex;
-    margin-top: 16px;
-    flex-direction: column;
-    padding: 21px 29px;
-  }
-  @media (max-width: 991px) {
-    .divProduct32 {
-      padding: 0 20px;
-    }
-  }
-  .imgProduct6 {
-    aspect-ratio: 1.15;
-    object-fit: contain;
-    object-position: center;
-    width: 112px;
-    overflow: hidden;
-  }
-  .divProduct33 {
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    background-color: var(--Secondary, #f5f5f5);
-    display: flex;
-    margin-top: 16px;
-    flex-direction: column;
-    padding: 22px 18px;
-  }
-  .imgProduct7 {
-    aspect-ratio: 1.43;
-    object-fit: contain;
-    object-position: center;
-    width: 134px;
-    overflow: hidden;
-  }
-  .divProduct34 {
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    background-color: var(--Secondary, #f5f5f5);
-    display: flex;
-    margin-top: 16px;
-    flex-direction: column;
-    padding: 16px 24px;
-  }
-  @media (max-width: 991px) {
-    .divProduct34 {
-      padding: 0 20px;
-    }
-  }
-  .imgProduct8 {
-    aspect-ratio: 1.15;
-    object-fit: contain;
-    object-position: center;
-    width: 122px;
-    overflow: hidden;
-  }
-  .columnProduct2 {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 49%;
-    margin-left: 20px;
-  }
-  @media (max-width: 991px) {
-    .columnProduct2 {
-      width: 100%;
-    }
-  }
-  .divProduct35 {
-    justify-content: center;
-    border-radius: 4px;
-    background-color: var(--Secondary, #f5f5f5);
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
     width: 100%;
-    padding: 50px 27px;
-  }
-  @media (max-width: 991px) {
-    .divProduct35 {
-      max-width: 100%;
-      margin-top: 30px;
-      padding: 0 20px;
-    }
-  }
-  .imgProduct9 {
-    aspect-ratio: 1.42;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    overflow: hidden;
-    margin: 104px 0 55px;
-  }
-  @media (max-width: 991px) {
-    .imgProduct9 {
-      max-width: 100%;
-      margin: 40px 0;
-    }
-  }
-  .columnProduct3 {
-    display: flex;
+    padding-top: 12px;
     flex-direction: column;
-    line-height: normal;
-    width: 36%;
-    margin-left: 52px;
-  }
-  @media (max-width: 991px) {
-    .columnProduct3 {
-      width: 100%;
-    }
-  }
-  .divProduct36 {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-  }
-  @media (max-width: 991px) {
-    .divProduct36 {
-      margin-top: 33px;
-    }
-  }
-  .divProduct37 {
-    color: var(--Text2, #000);
-    letter-spacing: 0.72px;
-    align-self: stretch;
-    font: 600 24px/100% Inter, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct38 {
-    align-self: stretch;
-    display: flex;
-    margin-top: 14px;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  .divProduct39 {
-    align-items: start;
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .imgProduct10 {
-    aspect-ratio: 5;
-    object-fit: contain;
-    object-position: center;
-    width: 100px;
-    align-items: flex-start;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .divProduct40 {
-    color: var(--Text2, #000);
-    font: 400 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct41 {
-    color: var(--Button1, #0f6);
-    white-space: nowrap;
-    padding-left: 16px;
-    justify-content: center;
-    font: 400 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct41 {
-      white-space: initial;
-    }
-  }
-  .divProduct42 {
-    color: var(--Text2, #000);
-    letter-spacing: 0.72px;
-    align-self: stretch;
-    margin-top: 17px;
-    font: 400 24px/100% Inter, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct43 {
-    color: #000;
-    align-self: stretch;
-    margin-top: 29px;
-    font: 400 14px/21px Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct44 {
-    background-color: #000;
-    align-self: stretch;
-    margin-top: 29px;
-    height: 1px;
-  }
-  .divProduct45 {
-    align-self: start;
-    display: flex;
-    margin-top: 24px;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .divProduct46 {
-    color: #000;
-    letter-spacing: 0.6px;
-    font: 400 20px/100% Inter, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct47 {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .imgProduct11 {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 20px;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .divProduct48 {
-    border-radius: 50%;
-    display: flex;
-    width: 20px;
-    height: 20px;
-    flex-direction: column;
-  }
-  .divProduct49 {
     align-items: center;
-    align-self: stretch;
-    display: flex;
-    margin-top: 24px;
-    justify-content: space-between;
-    gap: 20px;
   }
-  .divProduct50 {
-    color: #000;
-    letter-spacing: 0.6px;
-    flex-grow: 1;
-    white-space: nowrap;
-    margin: auto 0;
-    font: 400 20px/100% Inter, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct50 {
-      white-space: initial;
-    }
-  }
-  .divProduct51 {
-    align-self: stretch;
-    display: flex;
-    padding-right: 80px;
-    gap: 16px;
-  }
-  @media (max-width: 991px) {
-    .divProduct51 {
-      padding-right: 20px;
-    }
-  }
-  .divProduct52 {
-    color: var(--Text2, #000);
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    aspect-ratio: 1;
-    height: 32px;
-    padding: 0 8px;
-    font: 500 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct52 {
-      white-space: initial;
-    }
-  }
-  .divProduct53 {
-    color: var(--Text2, #000);
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    aspect-ratio: 1;
-    height: 32px;
-    padding: 0 13px;
-    font: 500 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct53 {
-      white-space: initial;
-    }
-  }
-  .divProduct54 {
-    color: var(--Text, #fafafa);
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    background-color: var(--Secondary-2, #db4444);
-    aspect-ratio: 1;
-    height: 32px;
-    padding: 0 11px;
-    font: 500 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct54 {
-      white-space: initial;
-    }
-  }
-  .divProduct55 {
-    color: var(--Text2, #000);
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    aspect-ratio: 1;
-    height: 32px;
-    padding: 0 14px;
-    font: 500 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct55 {
-      white-space: initial;
-    }
-  }
-  .divProduct56 {
-    color: var(--Text2, #000);
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    aspect-ratio: 1;
-    height: 32px;
-    padding: 0 9px;
-    font: 500 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  @media (max-width: 991px) {
-    .divProduct56 {
-      white-space: initial;
-    }
-  }
-  .divProduct57 {
-    align-self: stretch;
-    display: flex;
-    margin-top: 24px;
-    align-items: start;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 0 1px;
-  }
-  .divProduct58 {
-    align-self: stretch;
+  .divWishlist30 {
     display: flex;
     gap: 0px;
   }
-  .imgProduct12 {
-    aspect-ratio: 0.91;
-    object-fit: contain;
-    object-position: center;
-    width: 40px;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .divProduct59 {
-    color: var(--Text2, #000);
-    white-space: nowrap;
-    justify-content: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  .divWishlist31 {
+    display: flex;
     flex-grow: 1;
-    padding: 15px 35px;
-    font: 500 20px/140% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
+    flex-basis: 0%;
+    flex-direction: column;
   }
-  @media (max-width: 991px) {
-    .divProduct59 {
-      white-space: initial;
-      padding: 0 20px;
-    }
-  }
-  .imgProduct13 {
-    aspect-ratio: 0.93;
-    object-fit: contain;
-    object-position: center;
-    width: 41px;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .divProduct60 {
+  .divWishlist32 {
     color: var(--Text, #fafafa);
     justify-content: center;
     border-radius: 4px;
-    background-color: var(--Button2, #db4444);
-    align-self: center;
-    padding: 10px 48px;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+    background-color: var(--Secondary-2, #db4444);
+    padding: 4px 12px;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
-    cursor: pointer;
   }
-  .buyBtn {
-    
+  .imgWishlist5 {
+    aspect-ratio: 1.38;
+    object-fit: contain;
+    object-position: center;
+    width: 178px;
+    overflow: hidden;
+    align-self: end;
+    max-width: 100%;
+  }
+  .imgWishlist6 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    overflow: hidden;
+    align-self: start;
+    max-width: 100%;
+  }
+  .divWishlist33 {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
+    align-self: stretch;
+    display: flex;
+    margin-top: 39px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 60px;
   }
   @media (max-width: 991px) {
-    .divProduct60 {
-      white-space: initial;
+    .divWishlist33 {
       padding: 0 20px;
     }
   }
-  .imgProduct14 {
+  .divWishlist34 {
+    display: flex;
+    gap: 8px;
+  }
+  .imgWishlist7 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 42px;
-    justify-content: center;
-    align-items: center;
+    width: 24px;
     overflow: hidden;
     max-width: 100%;
   }
-  .divProduct61 {
+  .divWishlist35 {
+    color: #fff;
+    align-self: center;
+    flex-grow: 1;
+    white-space: nowrap;
+    margin: auto 0;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  @media (max-width: 991px) {
+    .divWishlist35 {
+      white-space: initial;
+    }
+  }
+  .divWishlist36 {
+    color: #000;
+    margin-top: 16px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist37 {
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .divWishlist38 {
+    color: var(--Secondary-2, #db4444);
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist39 {
+    color: var(--Button, #000);
+    text-decoration-line: strikethrough;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .columnWishlist2 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .columnWishlist2 {
+      width: 100%;
+    }
+  }
+  .divWishlist40 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .divWishlist40 {
+      margin-top: 30px;
+    }
+  }
+  .divWishlist41 {
     border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: var(--Secondary, #f5f5f5);
+    display: flex;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: end;
+  }
+  .imgWishlist8 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    overflow: hidden;
+    margin-right: 12px;
+    max-width: 100%;
+  }
+  @media (max-width: 991px) {
+    .imgWishlist8 {
+      margin-right: 10px;
+    }
+  }
+  .imgWishlist9 {
+    aspect-ratio: 2;
+    object-fit: contain;
+    object-position: center;
+    width: 190px;
+    overflow: hidden;
+    align-self: center;
+    margin-top: 19px;
+    max-width: 100%;
+  }
+  .divWishlist42 {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
     align-self: stretch;
     display: flex;
-    margin-top: 40px;
+    margin-top: 49px;
     width: 100%;
     flex-direction: column;
-    padding: 24px 0;
-  }
-  .divProduct62 {
+    justify-content: center;
     align-items: center;
-    align-self: start;
-    display: flex;
-    margin-left: 16px;
-    gap: 16px;
+    padding: 9px 60px;
   }
   @media (max-width: 991px) {
-    .divProduct62 {
-      margin-left: 10px;
+    .divWishlist42 {
+      margin-top: 40px;
+      padding: 0 20px;
     }
   }
-  .imgProduct15 {
+  .divWishlist43 {
+    display: flex;
+    gap: 8px;
+  }
+  .imgWishlist10 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 40px;
+    width: 24px;
     overflow: hidden;
     max-width: 100%;
-    margin: auto 0;
   }
-  .divProduct63 {
-    align-self: stretch;
-    display: flex;
+  .divWishlist44 {
+    color: #fff;
+    align-self: center;
     flex-grow: 1;
-    flex-basis: 0%;
-    flex-direction: column;
-  }
-  .divProduct64 {
-    color: #000;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct65 {
-    color: #000;
-    text-decoration-line: underline;
-    margin-top: 8px;
     white-space: nowrap;
-    font: 500 12px/150% Poppins, -apple-system, Roboto, Helvetica,
+    margin: auto 0;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct65 {
+    .divWishlist44 {
       white-space: initial;
     }
   }
-  .divProduct66 {
-    background-color: #000;
-    margin-top: 15px;
-    height: 1px;
+  .divWishlist45 {
+    color: #000;
+    margin-top: 16px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
   }
-  .divProduct67 {
-    align-items: center;
-    align-self: start;
+  .divWishlist46 {
+    color: var(--Secondary-2, #db4444);
+    margin-top: 8px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .columnWishlist3 {
     display: flex;
-    gap: 16px;
-    margin: 16px 0 0 16px;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
   }
   @media (max-width: 991px) {
-    .divProduct67 {
-      margin-left: 10px;
+    .columnWishlist3 {
+      width: 100%;
     }
   }
-  .imgProduct16 {
+  .divWishlist47 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .divWishlist47 {
+      margin-top: 30px;
+    }
+  }
+  .divWishlist48 {
+    border-radius: 4px;
+    background-color: var(--Secondary, #f5f5f5);
+    display: flex;
+    width: 100%;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: end;
+  }
+  .divWishlist49 {
+    display: flex;
+    margin-right: 12px;
+    align-items: end;
+    gap: 0px;
+  }
+  @media (max-width: 991px) {
+    .divWishlist49 {
+      margin-right: 10px;
+    }
+  }
+  .imgWishlist11 {
+    aspect-ratio: 1.19;
+    object-fit: contain;
+    object-position: center;
+    width: 178px;
+    overflow: hidden;
+    margin-top: 25px;
+    max-width: 100%;
+  }
+  .imgWishlist12 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 40px;
+    width: 34px;
     overflow: hidden;
+    align-self: start;
     max-width: 100%;
-    margin: auto 0;
   }
-  .divProduct68 {
+  .divWishlist50 {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
     align-self: stretch;
     display: flex;
-    flex-grow: 1;
-    flex-basis: 0%;
+    margin-top: 22px;
+    width: 100%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 60px;
   }
-  .divProduct69 {
-    color: #000;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
+  @media (max-width: 991px) {
+    .divWishlist50 {
+      padding: 0 20px;
+    }
   }
-  .divProduct70 {
-    color: #000;
-    text-decoration-line: underline;
-    margin-top: 8px;
+  .divWishlist51 {
+    display: flex;
+    gap: 8px;
+  }
+  .imgWishlist13 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .divWishlist52 {
+    color: #fff;
+    align-self: center;
+    flex-grow: 1;
     white-space: nowrap;
-    font: 500 12px/18px Poppins, -apple-system, Roboto, Helvetica,
+    margin: auto 0;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct70 {
+    .divWishlist52 {
       white-space: initial;
     }
   }
-  .divProduct71 {
+  .divWishlist53 {
+    color: #000;
+    margin-top: 16px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist54 {
+    color: var(--Secondary-2, #db4444);
+    margin-top: 8px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .columnWishlist4 {
     display: flex;
-    margin-top: 140px;
-    gap: 16px;
-    padding: 0 20px;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
   }
   @media (max-width: 991px) {
-    .divProduct71 {
+    .columnWishlist4 {
+      width: 100%;
+    }
+  }
+  .divWishlist55 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .divWishlist55 {
+      margin-top: 30px;
+    }
+  }
+  .divWishlist56 {
+    border-radius: 4px;
+    background-color: var(--Secondary, #f5f5f5);
+    display: flex;
+    width: 100%;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: end;
+  }
+  .divWishlist57 {
+    display: flex;
+    margin-right: 12px;
+    align-items: end;
+    gap: 0px;
+  }
+  @media (max-width: 991px) {
+    .divWishlist57 {
+      margin-right: 10px;
+    }
+  }
+  .imgWishlist14 {
+    aspect-ratio: 1.03;
+    object-fit: contain;
+    object-position: center;
+    width: 182px;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 12px;
+    max-width: 100%;
+  }
+  .imgWishlist15 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    overflow: hidden;
+    align-self: start;
+    max-width: 100%;
+  }
+  .divWishlist58 {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
+    align-self: stretch;
+    display: flex;
+    margin-top: 9px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 60px;
+  }
+  @media (max-width: 991px) {
+    .divWishlist58 {
+      padding: 0 20px;
+    }
+  }
+  .divWishlist59 {
+    display: flex;
+    gap: 8px;
+  }
+  .imgWishlist16 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .divWishlist60 {
+    color: #fff;
+    align-self: center;
+    flex-grow: 1;
+    white-space: nowrap;
+    margin: auto 0;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  @media (max-width: 991px) {
+    .divWishlist60 {
+      white-space: initial;
+    }
+  }
+  .divWishlist61 {
+    color: #000;
+    margin-top: 16px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist62 {
+    color: var(--Secondary-2, #db4444);
+    margin-top: 8px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist63 {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    margin-top: 80px;
+    width: 100%;
+    max-width: 1170px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  @media (max-width: 991px) {
+    .divWishlist63 {
+      max-width: 100%;
+      flex-wrap: wrap;
       margin-top: 40px;
     }
   }
-  .divProduct72 {
+  .divWishlist64 {
+    display: flex;
+    gap: 16px;
+    margin: auto 0;
+    padding: 0 20px;
+  }
+  .divWishlist65 {
     border-radius: 4px;
     background-color: var(--Secondary-2, #db4444);
     display: flex;
@@ -918,72 +819,85 @@
     height: 40px;
     flex-direction: column;
   }
-  .divProduct73 {
-    color: var(--Secondary-2, #db4444);
+  .divWishlist66 {
+    color: #000;
+    text-align: center;
     align-self: center;
     margin: auto 0;
-    font: 600 16px/125% Poppins, -apple-system, Roboto, Helvetica,
+    font: 400 20px/130% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct74 {
+  .divWishlist67 {
+    color: var(--Text2, #000);
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     align-self: stretch;
+    padding: 16px 48px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  @media (max-width: 991px) {
+    .divWishlist67 {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  .divWishlist68 {
+    align-self: center;
     margin-top: 60px;
+    width: 100%;
+    max-width: 1170px;
     padding: 0 20px;
   }
   @media (max-width: 991px) {
-    .divProduct74 {
+    .divWishlist68 {
       max-width: 100%;
       margin-top: 40px;
     }
   }
-  .divProduct75 {
+  .divWishlist69 {
     gap: 20px;
     display: flex;
   }
   @media (max-width: 991px) {
-    .divProduct75 {
+    .divWishlist69 {
       flex-direction: column;
       align-items: stretch;
       gap: 0px;
     }
   }
-  .columnProduct4 {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 25%;
-    margin-left: 0px;
-  }
-  @media (max-width: 991px) {
-    .columnProduct4 {
-      width: 100%;
-    }
-  }
-  .divProduct76 {
+  .divWishlist70 {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
   }
   @media (max-width: 991px) {
-    .divProduct76 {
+    .divWishlist70 {
       margin-top: 30px;
     }
   }
-  .divProduct77 {
+  .divWishlist71 {
     border-radius: 4px;
     background-color: var(--Secondary, #f5f5f5);
     display: flex;
-    justify-content: space-between;
-    gap: 3px;
-    padding: 12px 12px 49px;
+    width: 100%;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: center;
   }
-  .divProduct78 {
+  .divWishlist72 {
+    display: flex;
+    gap: 10px;
+  }
+  .divWishlist73 {
     display: flex;
     flex-grow: 1;
     flex-basis: 0%;
     flex-direction: column;
   }
-  .divProduct79 {
+  .divWishlist74 {
     color: var(--Text, #fafafa);
     justify-content: center;
     border-radius: 4px;
@@ -992,68 +906,374 @@
     font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .imgProduct17 {
+  .imgWishlist17 {
+    aspect-ratio: 0.95;
+    object-fit: contain;
+    object-position: center;
+    width: 158px;
+    overflow: hidden;
+    align-self: end;
+    z-index: 1;
+    margin-top: -9px;
+    max-width: 100%;
+  }
+  .imgWishlist18 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    overflow: hidden;
+    align-self: start;
+    max-width: 100%;
+  }
+  .divWishlist75 {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
+    align-self: stretch;
+    display: flex;
+    margin-top: 14px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 60px;
+  }
+  @media (max-width: 991px) {
+    .divWishlist75 {
+      padding: 0 20px;
+    }
+  }
+  .divWishlist76 {
+    display: flex;
+    gap: 8px;
+  }
+  .imgWishlist19 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .divWishlist77 {
+    color: #fff;
+    align-self: center;
+    flex-grow: 1;
+    white-space: nowrap;
+    margin: auto 0;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  @media (max-width: 991px) {
+    .divWishlist77 {
+      white-space: initial;
+    }
+  }
+  .divWishlist78 {
+    color: #000;
+    margin-top: 16px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist79 {
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .divWishlist80 {
+    color: var(--Secondary-2, #db4444);
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist81 {
+    color: var(--Button, #000);
+    text-decoration-line: strikethrough;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist82 {
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .imgWishlist20 {
+    aspect-ratio: 5;
+    object-fit: contain;
+    object-position: center;
+    width: 100px;
+    align-items: flex-start;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .divWishlist83 {
+    color: var(--Text2, #000);
+    font: 600 14px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .columnWishlist5 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .columnWishlist5 {
+      width: 100%;
+    }
+  }
+  .divWishlist84 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .divWishlist84 {
+      margin-top: 30px;
+    }
+  }
+  .divWishlist85 {
+    border-radius: 4px;
+    background-color: var(--Secondary, #f5f5f5);
+    display: flex;
+    padding-top: 12px;
+    flex-direction: column;
+  }
+  .divWishlist86 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 0 12px 0 50px;
+  }
+  @media (max-width: 991px) {
+    .divWishlist86 {
+      padding-left: 20px;
+    }
+  }
+  .imgWishlist21 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .imgWishlist22 {
+    aspect-ratio: 1.32;
+    object-fit: contain;
+    object-position: center;
+    width: 170px;
+    overflow: hidden;
+    align-self: start;
+    max-width: 100%;
+  }
+  .divWishlist87 {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
+    display: flex;
+    margin-top: 32px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 60px;
+  }
+  @media (max-width: 991px) {
+    .divWishlist87 {
+      padding: 0 20px;
+    }
+  }
+  .divWishlist88 {
+    display: flex;
+    gap: 8px;
+  }
+  .imgWishlist23 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .divWishlist89 {
+    color: #fff;
+    align-self: center;
+    flex-grow: 1;
+    white-space: nowrap;
+    margin: auto 0;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  @media (max-width: 991px) {
+    .divWishlist89 {
+      white-space: initial;
+    }
+  }
+  .divWishlist90 {
+    color: #000;
+    margin-top: 16px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist91 {
+    color: var(--Secondary-2, #db4444);
+    margin-top: 8px;
+    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .divWishlist92 {
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .imgWishlist24 {
+    aspect-ratio: 5;
+    object-fit: contain;
+    object-position: center;
+    width: 100px;
+    align-items: flex-start;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .divWishlist93 {
+    color: var(--Text2, #000);
+    font: 600 14px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .columnWishlist6 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .columnWishlist6 {
+      width: 100%;
+    }
+  }
+  .divWishlist94 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .divWishlist94 {
+      margin-top: 30px;
+    }
+  }
+  .divWishlist95 {
+    border-radius: 4px;
+    background-color: var(--Secondary, #f5f5f5);
+    display: flex;
+    width: 100%;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .divWishlist96 {
+    display: flex;
+    gap: 3px;
+  }
+  .divWishlist97 {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0%;
+    flex-direction: column;
+  }
+  .divWishlist98 {
+    color: var(--Text, #fafafa);
+    justify-content: center;
+    border-radius: 4px;
+    background-color: var(--Button1, #0f6);
+    padding: 4px 12px;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .imgWishlist25 {
     aspect-ratio: 1.13;
     object-fit: contain;
     object-position: center;
     width: 172px;
     overflow: hidden;
     align-self: end;
-    margin-top: 11px;
+    z-index: 1;
     max-width: 100%;
   }
-  .divProduct80 {
-    align-items: center;
+  .imgWishlist26 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    overflow: hidden;
     align-self: start;
+    max-width: 100%;
+  }
+  .divWishlist99 {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
+    align-self: stretch;
     display: flex;
-    flex-basis: 0%;
+    margin-top: 21px;
+    width: 100%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 60px;
   }
-  .imgProduct18 {
+  @media (max-width: 991px) {
+    .divWishlist99 {
+      padding: 0 20px;
+    }
+  }
+  .divWishlist100 {
+    display: flex;
+    gap: 8px;
+  }
+  .imgWishlist27 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 34px;
+    width: 24px;
     overflow: hidden;
+    max-width: 100%;
   }
-  .imgProduct19 {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 34px;
-    overflow: hidden;
-    margin-top: 8px;
+  .divWishlist101 {
+    color: #fff;
+    align-self: center;
+    flex-grow: 1;
+    white-space: nowrap;
+    margin: auto 0;
+    font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
+      sans-serif;
   }
-  .divProduct81 {
+  @media (max-width: 991px) {
+    .divWishlist101 {
+      white-space: initial;
+    }
+  }
+  .divWishlist102 {
     color: #000;
     margin-top: 16px;
     font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct82 {
-    display: flex;
-    margin-top: 8px;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .divProduct83 {
+  .divWishlist103 {
     color: var(--Secondary-2, #db4444);
+    margin-top: 8px;
     font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct84 {
-    color: var(--Button, #000);
-    text-decoration-line: strikethrough;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct85 {
+  .divWishlist104 {
     display: flex;
     margin-top: 8px;
     justify-content: space-between;
     gap: 8px;
   }
-  .imgProduct20 {
+  .imgWishlist28 {
     aspect-ratio: 5;
     object-fit: contain;
     object-position: center;
@@ -1062,12 +1282,12 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .divProduct86 {
+  .divWishlist105 {
     color: var(--Text2, #000);
     font: 600 14px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .columnProduct5 {
+  .columnWishlist7 {
     display: flex;
     flex-direction: column;
     line-height: normal;
@@ -1075,206 +1295,115 @@
     margin-left: 20px;
   }
   @media (max-width: 991px) {
-    .columnProduct5 {
+    .columnWishlist7 {
       width: 100%;
     }
   }
-  .divProduct87 {
+  .divWishlist106 {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
   }
   @media (max-width: 991px) {
-    .divProduct87 {
+    .divWishlist106 {
       margin-top: 30px;
     }
   }
-  .divProduct88 {
+  .divWishlist107 {
     border-radius: 4px;
     background-color: var(--Secondary, #f5f5f5);
     display: flex;
     padding-top: 12px;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
   }
-  .imgProduct21 {
-    aspect-ratio: 1.71;
+  .imgWishlist29 {
+    aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 246px;
+    width: 34px;
     overflow: hidden;
+    margin-right: 12px;
     max-width: 100%;
   }
-  .divProduct89 {
-    color: #fff;
-    white-space: nowrap;
+  @media (max-width: 991px) {
+    .imgWishlist29 {
+      margin-right: 10px;
+    }
+  }
+  .imgWishlist30 {
+    aspect-ratio: 1.88;
+    object-fit: contain;
+    object-position: center;
+    width: 190px;
+    overflow: hidden;
+    align-self: center;
+    margin-top: 16px;
+    max-width: 100%;
+  }
+  .divWishlist108 {
     border-radius: 0px 0px 4px 4px;
     background-color: var(--Button, #000);
     align-self: stretch;
-    margin-top: 53px;
+    display: flex;
+    margin-top: 46px;
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px 60px;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
+    padding: 9px 60px;
   }
   @media (max-width: 991px) {
-    .divProduct89 {
-      white-space: initial;
+    .divWishlist108 {
       margin-top: 40px;
       padding: 0 20px;
     }
   }
-  .divProduct90 {
-    color: #000;
-    margin-top: 16px;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct91 {
+  .divWishlist109 {
     display: flex;
-    margin-top: 8px;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .divProduct92 {
-    color: var(--Secondary-2, #db4444);
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct93 {
-    color: var(--Button, #000);
-    text-decoration-line: strikethrough;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct94 {
-    display: flex;
-    margin-top: 8px;
-    justify-content: space-between;
     gap: 8px;
   }
-  .imgProduct22 {
-    aspect-ratio: 5;
+  .imgWishlist31 {
+    aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 100px;
-    align-items: flex-start;
+    width: 24px;
     overflow: hidden;
     max-width: 100%;
   }
-  .divProduct95 {
-    color: var(--Text2, #000);
-    font: 600 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .columnProduct6 {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 25%;
-    margin-left: 20px;
-  }
-  @media (max-width: 991px) {
-    .columnProduct6 {
-      width: 100%;
-    }
-  }
-  .divProduct96 {
-    display: flex;
+  .divWishlist110 {
+    color: #fff;
+    align-self: center;
     flex-grow: 1;
-    flex-direction: column;
-  }
-  @media (max-width: 991px) {
-    .divProduct96 {
-      margin-top: 30px;
-    }
-  }
-  .divProduct97 {
-    border-radius: 4px;
-    background-color: var(--Secondary, #f5f5f5);
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 4px;
-    padding: 12px 12px 50px;
-  }
-  .divProduct98 {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0%;
-    flex-direction: column;
-  }
-  .divProduct99 {
-    color: var(--Text, #fafafa);
-    justify-content: center;
-    border-radius: 4px;
-    background-color: var(--Secondary-2, #db4444);
-    padding: 4px 12px;
+    white-space: nowrap;
+    margin: auto 0;
     font: 400 12px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .imgProduct23 {
-    aspect-ratio: 1.32;
-    object-fit: contain;
-    object-position: center;
-    width: 170px;
-    overflow: hidden;
-    align-self: end;
-    margin-top: 23px;
-    max-width: 100%;
+  @media (max-width: 991px) {
+    .divWishlist110 {
+      white-space: initial;
+    }
   }
-  .divProduct100 {
-    align-items: center;
-    display: flex;
-    flex-basis: 0%;
-    flex-direction: column;
-  }
-  .imgProduct24 {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 34px;
-    overflow: hidden;
-  }
-  .imgProduct25 {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 34px;
-    overflow: hidden;
-    margin-top: 8px;
-  }
-  .divProduct101 {
+  .divWishlist111 {
     color: #000;
     margin-top: 16px;
     font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct102 {
-    display: flex;
-    margin-top: 8px;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .divProduct103 {
+  .divWishlist112 {
     color: var(--Secondary-2, #db4444);
+    margin-top: 8px;
     font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct104 {
-    color: var(--Button, #000);
-    text-decoration-line: strikethrough;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct105 {
+  .divWishlist113 {
     display: flex;
     margin-top: 8px;
     justify-content: space-between;
     gap: 8px;
   }
-  .imgProduct26 {
+  .imgWishlist32 {
     aspect-ratio: 5;
     object-fit: contain;
     object-position: center;
@@ -1283,84 +1412,12 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .divProduct106 {
+  .divWishlist114 {
     color: var(--Text2, #000);
     font: 600 14px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .columnProduct7 {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 25%;
-    margin-left: 20px;
-  }
-  @media (max-width: 991px) {
-    .columnProduct7 {
-      width: 100%;
-    }
-  }
-  .divProduct107 {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-  }
-  @media (max-width: 991px) {
-    .divProduct107 {
-      margin-top: 30px;
-    }
-  }
-  .imgProduct27 {
-    aspect-ratio: 1.08;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    overflow: hidden;
-  }
-  .divProduct108 {
-    color: #000;
-    margin-top: 16px;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct109 {
-    display: flex;
-    margin-top: 8px;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .divProduct110 {
-    color: var(--Secondary-2, #db4444);
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct111 {
-    color: var(--Button, #000);
-    text-decoration-line: strikethrough;
-    font: 500 16px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct112 {
-    display: flex;
-    margin-top: 8px;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  .imgProduct28 {
-    aspect-ratio: 5;
-    object-fit: contain;
-    object-position: center;
-    width: 100px;
-    align-items: flex-start;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .divProduct113 {
-    color: var(--Text2, #000);
-    font: 600 14px/150% Poppins, -apple-system, Roboto, Helvetica,
-      sans-serif;
-  }
-  .divProduct114 {
+  .divWishlist115 {
     justify-content: flex-end;
     align-items: center;
     background-color: var(--Button, #000);
@@ -1372,12 +1429,12 @@
     padding: 50px 0 24px;
   }
   @media (max-width: 991px) {
-    .divProduct114 {
+    .divWishlist115 {
       max-width: 100%;
       margin-top: 40px;
     }
   }
-  .divProduct115 {
+  .divWishlist116 {
     justify-content: space-between;
     align-items: flex-start;
     display: flex;
@@ -1388,12 +1445,12 @@
     padding: 0 20px;
   }
   @media (max-width: 991px) {
-    .divProduct115 {
+    .divWishlist116 {
       max-width: 100%;
       flex-wrap: wrap;
     }
   }
-  .divProduct116 {
+  .divWishlist117 {
     align-self: start;
     display: flex;
     flex-grow: 1;
@@ -1401,29 +1458,29 @@
     flex-direction: column;
     padding: 2px 0;
   }
-  .divProduct117 {
+  .divWishlist118 {
     color: var(--Text, #fafafa);
     letter-spacing: 0.72px;
     font: 700 24px/100% Inter, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct117 {
+    .divWishlist118 {
       margin-right: 6px;
     }
   }
-  .divProduct118 {
+  .divWishlist119 {
     color: var(--Text, #fafafa);
     margin-top: 27px;
     font: 500 20px/140% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct118 {
+    .divWishlist119 {
       margin-right: 6px;
     }
   }
-  .divProduct119 {
+  .divWishlist120 {
     color: var(--Text, #fafafa);
     margin-top: 24px;
     white-space: nowrap;
@@ -1431,11 +1488,11 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct119 {
+    .divWishlist120 {
       white-space: initial;
     }
   }
-  .divProduct120 {
+  .divWishlist121 {
     border-radius: 4px;
     border: 1.5px solid var(--Text, #fafafa);
     display: flex;
@@ -1444,12 +1501,12 @@
     gap: 20px;
     padding: 12px 16px;
   }
-  .divProduct121 {
+  .divWishlist122 {
     color: var(--Text, #fafafa);
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .imgProduct29 {
+  .imgWishlist33 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1457,25 +1514,25 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .divProduct122 {
+  .divWishlist123 {
     align-self: start;
     display: flex;
     flex-grow: 1;
     flex-basis: 0%;
     flex-direction: column;
   }
-  .divProduct123 {
+  .divWishlist124 {
     color: var(--Text, #fafafa);
     font: 500 20px/140% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct124 {
+  .divWishlist125 {
     color: var(--Text, #fafafa);
     margin-top: 24px;
     font: 400 16px/24px Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct125 {
+  .divWishlist126 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     white-space: nowrap;
@@ -1483,11 +1540,11 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct125 {
+    .divWishlist126 {
       white-space: initial;
     }
   }
-  .divProduct126 {
+  .divWishlist127 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     white-space: nowrap;
@@ -1495,23 +1552,23 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct126 {
+    .divWishlist127 {
       white-space: initial;
     }
   }
-  .divProduct127 {
+  .divWishlist128 {
     align-self: stretch;
     display: flex;
     flex-grow: 1;
     flex-basis: 0%;
     flex-direction: column;
   }
-  .divProduct128 {
+  .divWishlist129 {
     color: var(--Text, #fafafa);
     font: 500 20px/140% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct129 {
+  .divWishlist130 {
     color: var(--Text, #fafafa);
     margin-top: 24px;
     white-space: nowrap;
@@ -1519,11 +1576,11 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct129 {
+    .divWishlist130 {
       white-space: initial;
     }
   }
-  .divProduct130 {
+  .divWishlist131 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     white-space: nowrap;
@@ -1531,46 +1588,46 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct130 {
+    .divWishlist131 {
       white-space: initial;
     }
   }
-  .divProduct131 {
+  .divWishlist132 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct132 {
+  .divWishlist133 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct133 {
+  .divWishlist134 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct134 {
+  .divWishlist135 {
     align-self: start;
     display: flex;
     flex-basis: 0%;
     flex-direction: column;
   }
-  .divProduct135 {
+  .divWishlist136 {
     color: var(--Text, #fafafa);
     white-space: nowrap;
     font: 500 20px/140% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct135 {
+    .divWishlist136 {
       white-space: initial;
     }
   }
-  .divProduct136 {
+  .divWishlist137 {
     color: var(--Text, #fafafa);
     margin-top: 24px;
     white-space: nowrap;
@@ -1578,11 +1635,11 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct136 {
+    .divWishlist137 {
       white-space: initial;
     }
   }
-  .divProduct137 {
+  .divWishlist138 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     white-space: nowrap;
@@ -1590,35 +1647,35 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct137 {
+    .divWishlist138 {
       white-space: initial;
     }
   }
-  .divProduct138 {
+  .divWishlist139 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct139 {
+  .divWishlist140 {
     color: var(--Text, #fafafa);
     margin-top: 16px;
     font: 400 16px/150% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct140 {
+  .divWishlist141 {
     align-self: start;
     display: flex;
     flex-grow: 1;
     flex-basis: 0%;
     flex-direction: column;
   }
-  .divProduct141 {
+  .divWishlist142 {
     color: var(--Text, #fafafa);
     font: 500 20px/140% Poppins, -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  .divProduct142 {
+  .divWishlist143 {
     color: var(--Text, #fafafa);
     margin-top: 24px;
     white-space: nowrap;
@@ -1626,18 +1683,18 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct142 {
+    .divWishlist143 {
       white-space: initial;
     }
   }
-  .divProduct143 {
+  .divWishlist144 {
     align-items: center;
     display: flex;
     margin-top: 8px;
     justify-content: space-between;
     gap: 8px;
   }
-  .imgProduct30 {
+  .imgWishlist34 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1648,7 +1705,7 @@
     max-width: 100%;
     margin: auto 0;
   }
-  .divProduct144 {
+  .divWishlist145 {
     align-items: center;
     align-self: stretch;
     display: flex;
@@ -1656,14 +1713,14 @@
     flex-basis: 0%;
     flex-direction: column;
   }
-  .imgProduct31 {
+  .imgWishlist35 {
     aspect-ratio: 2.75;
     object-fit: contain;
     object-position: center;
     width: 110px;
     overflow: hidden;
   }
-  .imgProduct32 {
+  .imgWishlist36 {
     aspect-ratio: 2.75;
     object-fit: contain;
     object-position: center;
@@ -1673,7 +1730,7 @@
     overflow: hidden;
     margin-top: 4px;
   }
-  .divProduct145 {
+  .divWishlist146 {
     display: flex;
     margin-top: 24px;
     padding-right: 30px;
@@ -1681,11 +1738,11 @@
     gap: 20px;
   }
   @media (max-width: 991px) {
-    .divProduct145 {
+    .divWishlist146 {
       padding-right: 20px;
     }
   }
-  .imgProduct33 {
+  .imgWishlist37 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1693,7 +1750,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .imgProduct34 {
+  .imgWishlist38 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1702,7 +1759,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .imgProduct35 {
+  .imgWishlist39 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1712,7 +1769,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .imgProduct36 {
+  .imgWishlist40 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1720,7 +1777,7 @@
     overflow: hidden;
     max-width: 100%;
   }
-  .divProduct146 {
+  .divWishlist147 {
     align-items: center;
     align-self: stretch;
     display: flex;
@@ -1730,18 +1787,18 @@
     padding: 16px 60px 0;
   }
   @media (max-width: 991px) {
-    .divProduct146 {
+    .divWishlist147 {
       max-width: 100%;
       margin-top: 40px;
       padding: 0 20px;
     }
   }
-  .divProduct147 {
+  .divWishlist148 {
     align-items: center;
     display: flex;
     gap: 6px;
   }
-  .imgProduct37 {
+  .imgWishlist41 {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1752,7 +1809,7 @@
     max-width: 100%;
     margin: auto 0;
   }
-  .divProduct148 {
+  .divWishlist149 {
     color: var(--Primary, #fff);
     align-self: stretch;
     flex-grow: 1;
@@ -1761,7 +1818,7 @@
       sans-serif;
   }
   @media (max-width: 991px) {
-    .divProduct148 {
+    .divWishlist149 {
       white-space: initial;
     }
   }
