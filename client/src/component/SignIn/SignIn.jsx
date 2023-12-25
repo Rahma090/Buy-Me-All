@@ -57,14 +57,13 @@ import { useIdentity } from '../../AuthorContext/IdentityContext.jsx'
           <TopHeader/>
           <Header value={3}/>
     
-            <div className="divS" />
             <div className="divS21">
               <div className="divS22">
                 <div className="col">
                   <div className="divS23">
                     <img
                       loading="lazy"
-                      srcSet="..."
+                      srcSet="https://i.ibb.co/XS8RQzm/intro.gif"
                       className="imgIn2"
                     />
                   </div>

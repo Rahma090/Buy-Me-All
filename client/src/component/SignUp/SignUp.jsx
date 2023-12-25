@@ -67,14 +67,13 @@ const SignUp=(props) =>{
       <TopHeader/>
       <Header value={3}/>
 
-        <div className="divUp" />
         <div className="divUp21">
           <div className="divUp22">
             <div className="col">
               <div className="divUp23">
                 <img
                   loading="lazy"
-                  srcSet="..."
+                  srcSet="https://i.ibb.co/XS8RQzm/intro.gif"
                   className="imgUp2"
                 />
               </div>
